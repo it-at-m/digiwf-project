@@ -43,7 +43,9 @@
             Resources
           </v-row>
           <v-row class="text-body-2 mt-6">
-            Architecture
+            <NuxtLink to="/architecture-page">
+              Architecture
+            </NuxtLink>
           </v-row>
           <v-row class="text-body-2 mt-6">
             Installation
