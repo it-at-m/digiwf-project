@@ -4,6 +4,10 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  router: {
+    base: '/digiwf-project/'
+  },
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - digiwf-project',
@@ -14,7 +18,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'DigiWF process infrastructure based on Camunda workflow engine. Opensource project by it@M, Landeshauptstadt München. Public money, public code.' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
