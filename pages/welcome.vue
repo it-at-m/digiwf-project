@@ -77,10 +77,10 @@
 </template>
 <script>
 export default {
-  /*eslint-disable */
+  /* eslint-disable */
   layout (context) {
     return 'landing'
   }
-  /*eslint-enable */
+  /* eslint-enable */
 }
 </script>
