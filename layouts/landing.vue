@@ -16,7 +16,7 @@
       </v-icon>
     </v-app-bar>
     <v-main>
-        <Nuxt />
+      <Nuxt />
     </v-main>
     <dwf-footer />
   </v-app>

@@ -46,7 +46,9 @@
         class="align-stretch"
       >
         <v-col class="text-center" cols="12">
-          <h3 class="grey--text">Under construction. Stay tuned!</h3>
+          <h3 class="grey--text">
+            Under construction. Stay tuned!
+          </h3>
         </v-col>
       </v-row>
     </v-sheet>
