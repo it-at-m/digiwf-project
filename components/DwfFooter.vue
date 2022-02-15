@@ -1,9 +1,9 @@
 <template>
   <v-footer dark padless class="ma-0 pa-8">
     <v-container fluid class="pa-0 ma-0">
-      <v-sheet height="100" color="transparent"/>
+      <v-sheet height="100" color="transparent" />
       <v-row class="pb-8">
-        <v-col/>
+        <v-col />
         <v-col>
           <v-row class="font-weight-medium">
             About
@@ -73,7 +73,7 @@
               label="e-mail"
               dense
               outlined
-            ></v-text-field>
+            />
           </v-row>
           <v-row class="text-body-2 ">
             <v-icon class="px-1">
@@ -84,7 +84,7 @@
             </v-icon>
           </v-row>
         </v-col>
-        <v-col/>
+        <v-col />
       </v-row>
     </v-container>
   </v-footer>
