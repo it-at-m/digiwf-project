@@ -21,4 +21,3 @@
     <dwf-footer />
   </v-app>
 </template>
-
