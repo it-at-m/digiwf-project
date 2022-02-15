@@ -58,7 +58,7 @@
 export default {
   /* eslint-disable */
   layout (context) {
-    return 'landing'
+    return 'landing-layout'
   }
   /* eslint-enable */
 }
