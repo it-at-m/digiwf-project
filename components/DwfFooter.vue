@@ -8,35 +8,41 @@
           <v-row class="font-weight-medium">
             About
           </v-row>
+<!--          <v-row class="text-body-2 mt-6">-->
+<!--            Open Source Software-->
+<!--          </v-row>-->
           <v-row class="text-body-2 mt-6">
-            Open Source Software
+            <NuxtLink class="text-decoration-none white--text" to="/about/rules">
+              Code of Conduct
+            </NuxtLink>
           </v-row>
           <v-row class="text-body-2 mt-6">
-            Code of Conduct
+            <NuxtLink class="text-decoration-none white--text" to="/about/contact">
+              Contact us
+            </NuxtLink>
           </v-row>
           <v-row class="text-body-2 mt-6">
-            Contact us
-          </v-row>
-          <v-row class="text-body-2 mt-6">
-            Impress
+            <NuxtLink class="text-decoration-none white--text" to="/about/impress">
+              Impress
+            </NuxtLink>
           </v-row>
         </v-col>
         <v-col class="font-weight-medium">
           <v-row class="font-weight-medium">
             Ecosystem
           </v-row>
-          <v-row class="text-body-2 mt-6">
-            Announcements
-          </v-row>
-          <v-row class="text-body-2 mt-6">
-            Contribute
-          </v-row>
-          <v-row class="text-body-2 mt-6">
-            Team
-          </v-row>
-          <v-row class="text-body-2 mt-6">
-            Tutorials
-          </v-row>
+<!--          <v-row class="text-body-2 mt-6">-->
+<!--            Announcements-->
+<!--          </v-row>-->
+<!--          <v-row class="text-body-2 mt-6">-->
+<!--            Contribute-->
+<!--          </v-row>-->
+<!--          <v-row class="text-body-2 mt-6">-->
+<!--            Team-->
+<!--          </v-row>-->
+<!--          <v-row class="text-body-2 mt-6">-->
+<!--            Tutorials-->
+<!--          </v-row>-->
         </v-col>
         <v-col class="font-weight-medium">
           <v-row class="font-weight-medium">
@@ -47,21 +53,21 @@
               Architecture
             </NuxtLink>
           </v-row>
-          <v-row class="text-body-2 mt-6">
-            Installation
-          </v-row>
-          <v-row class="text-body-2 mt-6">
-            Process Creation
-          </v-row>
-          <v-row class="text-body-2 mt-6">
-            Examples
-          </v-row>
-          <v-row class="text-body-2 mt-6">
-            Modules
-          </v-row>
-          <v-row class="text-body-2 mt-6">
-            Releases
-          </v-row>
+<!--          <v-row class="text-body-2 mt-6">-->
+<!--            Installation-->
+<!--          </v-row>-->
+<!--          <v-row class="text-body-2 mt-6">-->
+<!--            Process Creation-->
+<!--          </v-row>-->
+<!--          <v-row class="text-body-2 mt-6">-->
+<!--            Examples-->
+<!--          </v-row>-->
+<!--          <v-row class="text-body-2 mt-6">-->
+<!--            Modules-->
+<!--          </v-row>-->
+<!--          <v-row class="text-body-2 mt-6">-->
+<!--            Releases-->
+<!--          </v-row>-->
         </v-col>
         <v-col class="font-weight-medium">
           <v-row class="font-weight-medium">

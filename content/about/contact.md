@@ -1,8 +1,8 @@
 ---
 title: Contact us!
-description: 'Don't hesitate to contact us.
+description: ''
 category: 'About'
-position: 1
+position: 3
 ---
 
 Todo
