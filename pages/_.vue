@@ -24,7 +24,7 @@
         <v-list dense>
           <v-list-item v-for="link in article.toc" :key="link.id" nuxt :to="`#${link.id}`">
             <v-list-item-content>
-              <v-list-item-title>{{ link.text }}</v-list-item-title>
+              <v-list-item-title :class="{ 'ml-3': link.depth === 3 }">{{ link.text }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
