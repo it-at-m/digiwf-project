@@ -1,6 +1,8 @@
 ---
-title: Contact
-description: 'Contact us!'
+title: Contact us!
+description: 'Don't hesitate to contact us.
+category: 'About'
+position: 1
 ---
 
-This is a contact form
+Todo

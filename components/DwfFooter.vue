@@ -9,13 +9,13 @@
             About
           </v-row>
           <v-row class="text-body-2 mt-6">
-            Contact us
-          </v-row>
-          <v-row class="text-body-2 mt-6">
             Open Source Software
           </v-row>
           <v-row class="text-body-2 mt-6">
-            Partnerships
+            Code of Conduct
+          </v-row>
+          <v-row class="text-body-2 mt-6">
+            Contact us
           </v-row>
           <v-row class="text-body-2 mt-6">
             Impress
@@ -43,7 +43,7 @@
             Resources
           </v-row>
           <v-row class="text-body-2 mt-6">
-            <NuxtLink class="text-decoration-none white--text" to="/architecture-page">
+            <NuxtLink class="text-decoration-none white--text" to="/resources/documentation/architecture/overview">
               Architecture
             </NuxtLink>
           </v-row>
@@ -68,14 +68,7 @@
             Stay tuned!
           </v-row>
           <v-row class="text-body-2 mt-6">
-            The latest news, articles and resources sent to your inbox.
-          </v-row>
-          <v-row class="text-body-2 mt-6">
-            <v-text-field
-              label="e-mail"
-              dense
-              outlined
-            />
+            Star us on github, or follow on twitter.
           </v-row>
           <v-row class="text-body-2 ">
             <v-icon class="px-1">
