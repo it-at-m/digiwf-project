@@ -1,0 +1,1 @@
+window.__NUXT__={staticAssetsBase:"\u002Fdigiwf-project\u002F_nuxt\u002Fstatic\u002F1645106170",layout:"default",error:{statusCode:404,message:"Article not found"},serverRendered:false,routePath:"\u002Farchitecture-page",config:{_app:{basePath:"\u002Fdigiwf-project\u002F",assetsPath:"\u002Fdigiwf-project\u002F_nuxt\u002F",cdnURL:null},content:{dbHash:"ceb6f682"}}};
