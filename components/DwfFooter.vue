@@ -43,7 +43,7 @@
             Resources
           </v-row>
           <v-row class="text-body-2 mt-6">
-            <NuxtLink to="/architecture-page">
+            <NuxtLink class="text-decoration-none white--text" to="/architecture-page">
               Architecture
             </NuxtLink>
           </v-row>
