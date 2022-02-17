@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002Fdigiwf-project\u002F_nuxt\u002Fstatic\u002F1644996641",layout:"landing-layout",error:a,serverRendered:true,routePath:"\u002F",config:{_app:{basePath:"\u002Fdigiwf-project\u002F",assetsPath:"\u002Fdigiwf-project\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"5806c7b3"}}}}(null));
