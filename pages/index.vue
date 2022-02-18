@@ -89,7 +89,7 @@ export default {
     return 'landing-layout'
   },
   /* eslint-enable */
-  async asyncData ({ $content, app, params, error }) {
+  async asyncData ({ $content, error }) {
     // load the history
     const history = await $content('history').fetch()
     if (!history) {

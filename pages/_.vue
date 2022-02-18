@@ -34,7 +34,7 @@
 </template>
 <script>
 export default {
-  async asyncData ({ $content, app, params, error }) {
+  async asyncData ({ $content, params, error }) {
     // get url params
     const path = `/${params.pathMatch || 'index'}`
     // load the requested *.md file

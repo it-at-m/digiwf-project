@@ -21,7 +21,7 @@ export default {
     /**
      * Sends the user back to the landing page
      */
-    goHome() {
+    goHome () {
       this.$router.push('/')
     }
   }
