@@ -34,7 +34,7 @@
 <h3 align="center">DigiWF Project Page</h3>
 
   <p align="center">
-    This is the project landing page and documentation for the DigiWF process infrastructure.
+    This is the project landing page and documentation for the DigiWF process infrastructure. For more information visit the page here: https://digiwf.muenchendigital.io
     <br /><a href="https://github.com/it-at-m/digiwf-project/issues">Report Bug</a>
     ·
     <a href="https://github.com/it-at-m/digiwf-project/issues">Request Feature</a>
