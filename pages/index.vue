@@ -84,11 +84,6 @@
 </template>
 <script>
 export default {
-  /* eslint-disable */
-  layout (context) {
-    return 'landing-layout'
-  },
-  /* eslint-enable */
   async asyncData ({ $content, error }) {
     // load the history
     const history = await $content('history').fetch()

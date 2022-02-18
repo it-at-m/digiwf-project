@@ -7,9 +7,11 @@
         </span>
     </v-toolbar-title>
     <v-spacer />
-    <v-icon class="px-1">
-      mdi-github
-    </v-icon>
+    <v-btn icon href="https://github.com/it-at-m/digiwf-project" class="px-1">
+      <v-icon>
+        mdi-github
+      </v-icon>
+    </v-btn>
     <v-icon class="px-1">
       mdi-twitter
     </v-icon>

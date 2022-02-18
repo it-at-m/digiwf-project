@@ -77,9 +77,11 @@
             Star us on github, or follow on twitter.
           </v-row>
           <v-row class="text-body-2 ">
-            <v-icon class="px-1">
-              mdi-github
-            </v-icon>
+            <v-btn icon href="https://github.com/it-at-m/digiwf-project" class="px-1">
+              <v-icon>
+                mdi-github
+              </v-icon>
+            </v-btn>
             <v-icon class="px-1">
               mdi-twitter
             </v-icon>
@@ -90,3 +92,8 @@
     </v-container>
   </v-footer>
 </template>
+<script>
+export default {
+
+}
+</script>
