@@ -5,7 +5,7 @@ export default {
   target: 'static',
 
   router: {
-    base: '/digiwf-project/'
+    base: ''
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
