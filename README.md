@@ -1,69 +1,106 @@
-# digiwf-project
-
-## Build Setup
-
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
-
-## Special Directories
-
-You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
-
-### `assets`
-
-The assets directory contains your uncompiled assets such as Stylus or Sass files, images, or fonts.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/assets).
-
-### `components`
-
-The components directory contains your Vue.js components. Components make up the different parts of your page and can be reused and imported into your pages, layouts and even other components.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/components).
-
-### `layouts`
-
-Layouts are a great help when you want to change the look and feel of your Nuxt app, whether you want to include a sidebar or have distinct layouts for mobile and desktop.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/layouts).
+<div id="top"></div>
 
 
-### `pages`
+<!-- PROJECT SHIELDS -->
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-This directory contains your application views and routes. Nuxt will read all the `*.vue` files inside this directory and setup Vue Router automatically.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/it-at-m/digiwf-s3-integration">
+    <img src="static/itm_logo.png" alt="Logo" height="200">
+  </a>
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/get-started/routing).
+<h3 align="center">DigiWF Project Page</h3>
 
-### `plugins`
+  <p align="center">
+    This is the project landing page and documentation for the DigiWF process infrastructure. For more information visit https://digiwf.muenchendigital.io
+    <br /><a href="https://github.com/it-at-m/digiwf-project/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/it-at-m/digiwf-project/issues">Request Feature</a>
+  </p>
+</div>
 
-The plugins directory contains JavaScript plugins that you want to run before instantiating the root Vue.js Application. This is the place to add Vue plugins and to inject functions or constants. Every time you need to use `Vue.use()`, you should create a file in `plugins/` and add its path to plugins in `nuxt.config.js`.
+<!-- ABOUT THE PROJECT -->
+## About The Project
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/plugins).
+This Project is the landing page of DigiWF. For more information and facts about the development of our project - the DigiWF workflow automation and integration platform - please visit https://digiwf.muenchendigital.io.
 
-### `static`
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-This directory contains your static files. Each file inside this directory is mapped to `/`.
 
-Example: `/static/robots.txt` is mapped as `/robots.txt`.
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/static).
+### Built With
 
-### `store`
+The documentation project is built with frontend technologies we use in our projects:
 
-This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
+* [Vue.js](https://vuejs.org/)
+* [Nuxt.js](https://nuxtjs.org/)
+* [Vuetify.js](https://vuetifyjs.com/)
 
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [ ] Add architecture documentation
+- [ ] Link all repositories that will be open source
+
+See the [open issues](https://github.com/it-at-m/digiwf-project/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please open an issue with the tag "enhancement", fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Open an issue with the tag "enhancement"
+2. Fork the Project
+3. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+4. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+5. Push to the Branch (`git push origin feature/AmazingFeature`)
+6. Open a Pull Request
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+it@m - opensource@muenchendigital.io
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/it-at-m/digiwf-project.svg?style=for-the-badge
+[contributors-url]: https://github.com/it-at-m/digiwf-project/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/it-at-m/digiwf-project.svg?style=for-the-badge
+[forks-url]: https://github.com/it-at-m/digiwf-project/network/members
+[stars-shield]: https://img.shields.io/github/stars/it-at-m/digiwf-project.svg?style=for-the-badge
+[stars-url]: https://github.com/it-at-m/digiwf-project/stargazers
+[issues-shield]: https://img.shields.io/github/issues/it-at-m/digiwf-project.svg?style=for-the-badge
+[issues-url]: https://github.com/it-at-m/digiwf-project/issues
+[license-shield]: https://img.shields.io/github/license/it-at-m/digiwf-project.svg?style=for-the-badge
+[license-url]: https://github.com/it-at-m/digiwf-project/blob/master/LICENSE
+[product-screenshot]: images/screenshot.png
