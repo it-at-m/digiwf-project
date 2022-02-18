@@ -1,28 +1,12 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
 
 
 <!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-
 
 <!-- PROJECT LOGO -->
 <br />
@@ -34,7 +18,7 @@
 <h3 align="center">DigiWF Project Page</h3>
 
   <p align="center">
-    This is the project landing page and documentation for the DigiWF process infrastructure. For more information visit the page here: https://digiwf.muenchendigital.io
+    This is the project landing page and documentation for the DigiWF process infrastructure. For more information visit https://digiwf.muenchendigital.io
     <br /><a href="https://github.com/it-at-m/digiwf-project/issues">Report Bug</a>
     ·
     <a href="https://github.com/it-at-m/digiwf-project/issues">Request Feature</a>
@@ -44,7 +28,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This Project is the landing page of DigiWF. For more information and hard facts about the "real" project - the DigiWF workflow automation and integration platform - please visit https://digiwf.muenchendigital.io.
+This Project is the landing page of DigiWF. For more information and facts about the development of our project - the DigiWF workflow automation and integration platform - please visit https://digiwf.muenchendigital.io.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -52,7 +36,7 @@ This Project is the landing page of DigiWF. For more information and hard facts 
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+The documentation project is built with frontend technologies we use in our projects:
 
 * [Vue.js](https://vuejs.org/)
 * [Nuxt.js](https://nuxtjs.org/)
@@ -60,21 +44,11 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
 <!-- ROADMAP -->
 ## Roadmap
 
 - [ ] Add architecture documentation
-- [ ] Add comprehensiv documentation
-- [ ] Add presigned urls
-- [ ] Add async spring cloud stream api
+- [ ] Link all repositories that will be open source
 
 See the [open issues](https://github.com/it-at-m/digiwf-project/issues) for a full list of proposed features (and known issues).
 
