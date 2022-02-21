@@ -23,18 +23,18 @@
           xl="4"
         >
           <v-sheet class="pa-3" color="rgb(255,255,255, 0.9)">
-            <h1 class="text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4 font-weight-black mb-1 mb-xl-5 mb-lg-4 mb-md-3 mb-sm-2">
+            <div class="text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4 font-weight-black mb-1 mb-xl-5 mb-lg-4 mb-md-3 mb-sm-2">
               processes.
-            </h1>
-            <h1 class="text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4 font-weight-black mb-1 mb-xl-5 mb-lg-4 mb-md-3 mb-sm-2">
+            </div>
+            <div class="text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4 font-weight-black mb-1 mb-xl-5 mb-lg-4 mb-md-3 mb-sm-2">
               forms.
-            </h1>
-            <h1 class="text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4 font-weight-black mb-1 mb-xl-5 mb-lg-4 mb-md-3 mb-sm-2">
+            </div>
+            <div class="text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4 font-weight-black mb-1 mb-xl-5 mb-lg-4 mb-md-3 mb-sm-2">
               integration.
-            </h1>
-            <h4 class="subheading">
+            </div>
+            <div class="subheading">
               build your end2end process app today!
-            </h4>
+            </div>
           </v-sheet>
         </v-col>
       </v-row>
