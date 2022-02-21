@@ -77,7 +77,7 @@
             Star us on github, or follow on twitter.
           </v-row>
           <v-row class="text-body-2 ">
-            <v-btn icon href="https://github.com/it-at-m/digiwf-project" class="px-1">
+            <v-btn icon aria-label="link to our github account" href="https://github.com/it-at-m/digiwf-project" class="px-1">
               <v-icon>
                 mdi-github
               </v-icon>
