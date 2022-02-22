@@ -12,9 +12,11 @@
         mdi-github
       </v-icon>
     </v-btn>
-    <v-icon class="px-1">
-      mdi-twitter
-    </v-icon>
+    <v-btn aria-label="link to our twitter account" icon  href="https://twitter.com/digiwf_munich" class="px-1">
+      <v-icon>
+        mdi-twitter
+      </v-icon>
+    </v-btn>
   </v-app-bar>
 </template>
 <script>
