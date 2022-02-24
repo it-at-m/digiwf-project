@@ -13,7 +13,13 @@ DigiWF is the glue between your frontend and backend systems. Everything you can
 <figcaption>Interaction DigWF Core & the surrounding systems</figcaption>
 </figure>
 
-The main goal of DigiWF is to create a declarative way for process designers to interact with a technical infrastructure. For this we've created some supporting services around the opensource [camunda](https://camunda.com/) workflow. Camunda itself is used as a dependency embedded inside the process service.
+The main goal of DigiWF is to create a declarative way for process designers to interact with a technical infrastructure. For this we've created some supporting services around the opensource [camunda](https://camunda.com/) workflow:
+
+- Process Service: This is the service where Camunda is embedded. It is used mainly to execute the BPMN workflows.
+- Service Instance: This handles any kind of service instances. A service instance can be a process, but must not. 
+- Task Service: This service handles everything we need for human tasks (authorization, mapping, back channel, ...). The task service is backed by an Elasticsearch database, so you can do full text search over all tasks.
+- Form & Validation Service: This handles everything, that we need around forms. We store the form definition here an do all kind of form validation.
+- Service Definition Service: This service is responsible for service definitions and the corresponding configurations.  
 
 
 ## Core Modules
@@ -21,6 +27,23 @@ The main goal of DigiWF is to create a declarative way for process designers to 
 <v-img contain max-width="960" src="resources/documentation/architecture/digiwf_core_modules.png" lazy-src="preview_blue_yellow.png" ></v-img>
 <figcaption>The DigiWF Modules + possibilities to integrate custom components</figcaption>
 </figure>
+
+The picture above shows a possible "full blown" DigiWF architecture including self crafted artifacts. Everything in blue is provided by the DigiWF project, but as you know we're open for integrations from every direction. So you could create and integrate:
+
+- your own front ends
+- your own integration artifacts to communicate with your on premise or cloud infrastructure
+- your own (micro) services
+
+You can use any technology you want. There're only two preconditions:
+
+- your frontend technology must have a GraphQL client
+- your backen (services, integration artifacts) must be able to communicate with one of [Spring Cloud Streams](https://spring.io/projects/spring-cloud-stream) supported Binder implementations.
+
+<v-alert color="yellow darken-1" border="left" elevation="2" colored-border icon="mdi-robot-confused">
+If you want use an other EventBus infrastructure than Apache Kafka, you have to configure this in your DigiWF configurations.
+</v-alert>
+
+Of course - if you'll use Spring Boot in your backend components and VueJs as front end technology, you can use all cross-section components (like Spring Boot Starters, NPM components, ...) we have created for our components.
 
 ### DigiWF Core
 
@@ -30,55 +53,21 @@ The main goal of DigiWF is to create a declarative way for process designers to 
 
 ### DigiWF Co-Creation
 
-<v-alert color="yellow darken-1" border="left" elevation="2" colored-border icon="mdi-robot-confused">
-This is a hint field!
-</v-alert>
+[comment]: <> (<v-alert color="yellow darken-1" border="left" elevation="2" colored-border icon="mdi-robot-confused">)
 
-<v-alert color="red darken-1" border="left" elevation="2" colored-border icon="mdi-robot-angry">
-This is a warn field!
-</v-alert>
+[comment]: <> (This is a hint field!)
 
-<v-alert color="grey lighten-1" border="left" elevation="2" colored-border icon="mdi-robot-happy">
-This is a neutral field!
-</v-alert>
+[comment]: <> (</v-alert>)
 
-## Second Header
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+[comment]: <> (<v-alert color="red darken-1" border="left" elevation="2" colored-border icon="mdi-robot-angry">)
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+[comment]: <> (This is a warn field!)
 
-### Sub Header
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+[comment]: <> (</v-alert>)
 
-### Other Sub Header
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+[comment]: <> (<v-alert color="grey lighten-1" border="left" elevation="2" colored-border icon="mdi-robot-happy">)
 
-### Some Java Script Code
+[comment]: <> (This is a neutral field!)
 
-Javascript Code Block
-```javascript
-export default {
-  async asyncData ({ $content, app, params, error }) {
-    // get url params
-    const path = `/${params.pathMatch || 'index'}`
-    // load the requested *.md file
-    const [article] = await $content({ deep: true }).where({ path }).fetch()
-    let navigation = []
+[comment]: <> (</v-alert>)
 
-    if (!article) {
-      // nothing found? nirwana!
-      return error({ statusCode: 404, message: 'Article not found' })
-    } else {
-      // load all articles in the requested folder
-      navigation = await $content(article.dir).only(['title', 'path', 'category']).sortBy('position').fetch()
-    }
-
-    return {
-      article, navigation
-    }
-  }
-}
-```
-
-## Some other Header
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
