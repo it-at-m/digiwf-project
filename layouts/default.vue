@@ -32,13 +32,15 @@
 .nuxt-content h2 {
   font-weight: 300;
   font-size: 3.00rem;
-  margin-bottom: 0.7em;
+  margin-top: 0.7em;
+  margin-bottom: 0.4em;
 }
 
 .nuxt-content h3 {
   font-weight: 400;
   font-size: 2rem;
-  margin-bottom: 0.4em;
+  margin-top: 0.4em;
+  margin-bottom: 0.2em;
 }
 
 .nuxt-content div.v-alert {

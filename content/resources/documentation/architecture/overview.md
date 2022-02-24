@@ -1,5 +1,5 @@
 ---
-title: Architecture Overview
+title: DigiWF Overview
 description: What is the DigiWF architecture from an astronauts view.
 category: 'Architecture'
 position: 1
@@ -24,7 +24,12 @@ The main goal of DigiWF is to create a declarative way for process designers to 
 
 ## Core Modules
 <figure>
-<v-img contain max-width="960" src="resources/documentation/architecture/digiwf_core_modules.png" lazy-src="preview_blue_yellow.png" ></v-img>
+<v-img alt="The DigiWF architecture with attached custom components like frone end, microservices and integration 
+artifacts. You can see the four provided DigiWF modules core, tasklist, integration and co-creation." contain 
+max-width="960" 
+src="resources/documentation/architecture/digiwf_core_modules.
+png" 
+lazy-src="preview_blue_yellow.png" ></v-img>
 <figcaption>The DigiWF Modules + possibilities to integrate custom components</figcaption>
 </figure>
 
@@ -46,12 +51,21 @@ If you want use an other EventBus infrastructure than Apache Kafka, you have to 
 Of course - if you'll use Spring Boot in your backend components and VueJs as front end technology, you can use all cross-section components (like Spring Boot Starters, NPM components, ...) we have created for our components.
 
 ### DigiWF Core
-
+DigiWF Core is the heard of DigiWF. As you can see in the section above it consists of 5 services. It has a GraphQL API to interact with ist from front end applications and a very generic API, that communicates with various backend systems over an event bus.
+   
 ### DigiWF Integration
+If you want to integrate any kind of backend system, you can do this via the integration layer. DigiWF integration is on one side a set of predefined integration artifacts like S3, Mail, JMS or other. On the other side is DigiWF integration a toolbox, to help you to build own integration artifacts as quick as possible. 
 
 ### DigiWF Tasklist
+This is a simple frontend to interact with running process instances. Every user task occurs on the tasklist and can be picked up (of course only if you have the right to). You can see the state of "your" processes and you can start new instances over the tasklist. If you don't like such a highly standardized frontend, you're free to use the components like the form builder and integrate them into your own beautiful web app. Or you can use the API directly and build all the fancy frontend stuff on your own, in the technology you like most.   
 
 ### DigiWF Co-Creation
+The DigiWF Co-Creation section is the low code area. Here can a process designer draw BPMN processes, tinkering with decision tables (DMN) or create webforms per drag and drop. Deployment into different infrastructures is possible over this web app, too. 
+<figure>
+<v-img contain max-width="1200" alt="A picture of the DigiWF form builder wich is a part of the co-creation application."  src="resources/documentation/architecture/form_builder.png" 
+lazy-src="preview_screenshot.png" ></v-img>
+<figcaption>The DigiWF Form Builder</figcaption>
+</figure>
 
 [comment]: <> (<v-alert color="yellow darken-1" border="left" elevation="2" colored-border icon="mdi-robot-confused">)
 
