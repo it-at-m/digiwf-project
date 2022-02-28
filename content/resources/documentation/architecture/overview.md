@@ -16,9 +16,10 @@ DigiWF is the glue between your frontend and backend systems. Everything you can
 The main goal of DigiWF is to create a declarative way for process designers to interact with a technical infrastructure. For this we've created some supporting services around the opensource [camunda](https://camunda.com/) workflow:
 
 - Process Service: This is the service where Camunda is embedded. It is used mainly to execute the BPMN workflows.
-- Service Instance: This handles any kind of service instances. A service instance can be a process, but must not. 
-- Task Service: This service handles everything we need for human tasks (authorization, mapping, back channel, ...). The task service is backed by an Elasticsearch database, so you can do full text search over all tasks.
-- Form & Validation Service: This handles everything, that we need around forms. We store the form definition here an do all kind of form validation.
+- Service Instance: This handles any kind of service instances. A service instance can be a process, but does not 
+  have to do. 
+- Task Service: This service handles everything we need for human tasks (authorization, mapping, back channel, ...).
+- Form & Validation Service: Everything we need in connection with forms is processed. We save the form definition and perform all kinds of form validation.
 - Service Definition Service: This service is responsible for service definitions and the corresponding configurations.  
 
 
@@ -33,9 +34,10 @@ lazy-src="preview_blue_yellow.png" ></v-img>
 <figcaption>The DigiWF Modules + possibilities to integrate custom components</figcaption>
 </figure>
 
-The picture above shows a possible "full blown" DigiWF architecture including self crafted artifacts. Everything in blue is provided by the DigiWF project, but as you know we're open for integrations from every direction. So you could create and integrate:
+The picture above shows a possible "full blown" DigiWF architecture including self crafted artifacts. Everything in 
+blue is provided by the DigiWF project, but we're open for integrations. So you could create and integrate:
 
-- your own front ends
+- your own frontends
 - your own integration artifacts to communicate with your on premise or cloud infrastructure
 - your own (micro) services
 
@@ -45,13 +47,14 @@ You can use any technology you want. There're only two preconditions:
 - your backen (services, integration artifacts) must be able to communicate with one of [Spring Cloud Streams](https://spring.io/projects/spring-cloud-stream) supported Binder implementations.
 
 <v-alert color="yellow darken-1" border="left" elevation="2" colored-border icon="mdi-robot-confused">
-If you want use an other EventBus infrastructure than Apache Kafka, you have to configure this in your DigiWF configurations.
+If you want use another EventBus infrastructure than Apache Kafka, you have to configure this in your DigiWF configurations.
 </v-alert>
 
 Of course - if you'll use Spring Boot in your backend components and VueJs as front end technology, you can use all cross-section components (like Spring Boot Starters, NPM components, ...) we have created for our components.
 
 ### DigiWF Core
-DigiWF Core is the heard of DigiWF. As you can see in the section above it consists of 5 services. It has a GraphQL API to interact with ist from front end applications and a very generic API, that communicates with various backend systems over an event bus.
+DigiWF Core is the heart of DigiWF. As you can see in the section above it consists of 5 services. It has a GraphQL 
+API to interact with frontend applications and a very generic API, that communicates with various backend systems over an event bus.
    
 ### DigiWF Integration
 If you want to integrate any kind of backend system, you can do this via the integration layer. DigiWF integration is on one side a set of predefined integration artifacts like S3, Mail, JMS or other. On the other side is DigiWF integration a toolbox, to help you to build own integration artifacts as quick as possible. 
@@ -60,7 +63,8 @@ If you want to integrate any kind of backend system, you can do this via the int
 This is a simple frontend to interact with running process instances. Every user task occurs on the tasklist and can be picked up (of course only if you have the right to). You can see the state of "your" processes and you can start new instances over the tasklist. If you don't like such a highly standardized frontend, you're free to use the components like the form builder and integrate them into your own beautiful web app. Or you can use the API directly and build all the fancy frontend stuff on your own, in the technology you like most.   
 
 ### DigiWF Co-Creation
-The DigiWF Co-Creation section is the low code area. Here can a process designer draw BPMN processes, tinkering with decision tables (DMN) or create webforms per drag and drop. Deployment into different infrastructures is possible over this web app, too. 
+The DigiWF Co-Creation section is the low code area. Here can a process designer can draw BPMN processes, tinkering 
+with decision tables (DMN) or create webforms per drag and drop. Deployment into different infrastructures is possible over this web app, too. 
 <figure>
 <v-img contain max-width="1200" alt="A picture of the DigiWF form builder wich is a part of the co-creation application."  src="resources/documentation/architecture/form_builder.png" 
 lazy-src="preview_screenshot.png" ></v-img>
