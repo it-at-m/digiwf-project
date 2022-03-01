@@ -37,7 +37,9 @@ import { VAlert, VImg } from 'vuetify/lib'
 
 export default {
   components: {
+    // eslint-disable-next-line vue/no-unused-components
     VAlert,
+    // eslint-disable-next-line vue/no-unused-components
     VImg
   },
   async asyncData ({ $content, params, error }) {
