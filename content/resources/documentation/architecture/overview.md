@@ -9,11 +9,14 @@ DigiWF is the glue between your frontend and backend systems. Everything you can
 
 ## The DigiWF Platform Concept
 <figure>
-<v-img alt="The concept behind DigiWF. In the middle are your business processes, that can talk to your backend or the cloud via integration artifacts." contain max-width="960" src="resources/documentation/architecture/digiwf_concept.png" lazy-src="preview_blue_yellow.png" ></v-img>
+<v-img alt="The concept behind DigiWF. In the middle are your business processes, that can talk to your backend or the cloud via integration artifacts." contain max-width="960" src="images/resources/documentation/architecture/digiwf_concept.png" lazy-src="preview_blue_yellow.png" ></v-img>
 <figcaption>Interaction DigWF Core & the surrounding systems</figcaption>
 </figure>
 
 The main goal of DigiWF is to create a declarative way for process designers to interact with a technical infrastructure. For this we've created some supporting services around the opensource [camunda](https://camunda.com/) workflow:
+
+[comment]: <> (![Foo]&#40;images/resources/documentation/architecture/digiwf_concept.png&#41;)
+
 
 - Process Service: This is the service where Camunda is embedded. It is used mainly to execute the BPMN workflows.
 - Service Instance: This handles any kind of service instances. A service instance can be a process, but does not 
@@ -28,7 +31,7 @@ The main goal of DigiWF is to create a declarative way for process designers to 
 <v-img alt="The DigiWF architecture with attached custom components like frone end, microservices and integration 
 artifacts. You can see the four provided DigiWF modules core, tasklist, integration and co-creation." contain 
 max-width="960" 
-src="resources/documentation/architecture/digiwf_core_modules.
+src="images/resources/documentation/architecture/digiwf_core_modules.
 png" 
 lazy-src="preview_blue_yellow.png" ></v-img>
 <figcaption>The DigiWF Modules + possibilities to integrate custom components</figcaption>
@@ -66,7 +69,8 @@ This is a simple frontend to interact with running process instances. Every user
 The DigiWF Co-Creation section is the low code area. Here can a process designer can draw BPMN processes, tinkering 
 with decision tables (DMN) or create webforms per drag and drop. Deployment into different infrastructures is possible over this web app, too. 
 <figure>
-<v-img contain max-width="1200" alt="A picture of the DigiWF form builder wich is a part of the co-creation application."  src="resources/documentation/architecture/form_builder.png" 
+<v-img contain max-width="1200" alt="A picture of the DigiWF form builder wich is a part of the co-creation 
+application."  src="images/resources/documentation/architecture/form_builder.png" 
 lazy-src="preview_screenshot.png" ></v-img>
 <figcaption>The DigiWF Form Builder</figcaption>
 </figure>

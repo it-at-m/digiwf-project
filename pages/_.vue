@@ -33,7 +33,13 @@
   </v-container>
 </template>
 <script>
+import { VAlert, VImg } from 'vuetify/lib'
+
 export default {
+  components: {
+    VAlert,
+    VImg
+  },
   async asyncData ({ $content, params, error }) {
     // get url params
     const path = `/${params.pathMatch || 'index'}`
