@@ -9,7 +9,10 @@ DigiWF is the glue between your frontend and backend systems. Everything you can
 
 ## The DigiWF Platform Concept
 <figure>
-<v-img alt="The concept behind DigiWF. In the middle are your business processes, that can talk to your backend or the cloud via integration artifacts." contain max-width="960" src="images/resources/documentation/architecture/digiwf_concept.png" lazy-src="preview_blue_yellow.png" ></v-img>
+<v-img alt="The concept behind DigiWF. In the middle are your business processes, that can talk to your backend or 
+the cloud via integration artifacts." contain max-width="960" 
+src="images/resources/documentation/architecture/digiwf_concept.png" 
+lazy-src="images/resources/documentation/architecture/preview_digiwf_concept.png" ></v-img>
 <figcaption>Interaction DigWF Core & the surrounding systems</figcaption>
 </figure>
 
@@ -33,7 +36,7 @@ artifacts. You can see the four provided DigiWF modules core, tasklist, integrat
 max-width="960" 
 src="images/resources/documentation/architecture/digiwf_core_modules.
 png" 
-lazy-src="preview_blue_yellow.png" ></v-img>
+lazy-src="images/resources/documentation/architecture/preview_digiwf_core_modules.png" ></v-img>
 <figcaption>The DigiWF Modules + possibilities to integrate custom components</figcaption>
 </figure>
 
@@ -71,7 +74,7 @@ with decision tables (DMN) or create webforms per drag and drop. Deployment into
 <figure>
 <v-img contain max-width="1200" alt="A picture of the DigiWF form builder wich is a part of the co-creation 
 application."  src="images/resources/documentation/architecture/form_builder.png" 
-lazy-src="preview_screenshot.png" ></v-img>
+lazy-src="images/resources/documentation/architecture/preview_form_builder.png" ></v-img>
 <figcaption>The DigiWF Form Builder</figcaption>
 </figure>
 
