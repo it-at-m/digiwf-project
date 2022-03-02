@@ -33,7 +33,15 @@
   </v-container>
 </template>
 <script>
+import { VAlert, VImg } from 'vuetify/lib'
+
 export default {
+  components: {
+    // eslint-disable-next-line vue/no-unused-components
+    VAlert,
+    // eslint-disable-next-line vue/no-unused-components
+    VImg
+  },
   async asyncData ({ $content, params, error }) {
     // get url params
     const path = `/${params.pathMatch || 'index'}`

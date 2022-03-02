@@ -19,10 +19,16 @@
 .nuxt-content figcaption {
   font-size: smaller;
   color: #616161;
+  margin-bottom: 2em;
 }
 
 .nuxt-content p {
   margin-top: 2em;
+}
+
+.nuxt-content figure p {
+  margin: 0;
+  padding: 0;
 }
 
 .nuxt-content figure div {

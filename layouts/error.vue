@@ -11,7 +11,7 @@
               cols="12"
           >
             <v-card class="mx-auto" max-width="500">
-              <v-img src="404.png" width="100%" />
+              <v-img src="images/404.png" width="100%" />
               <v-card-actions>
                 <v-btn text nuxt to="/">
                   Go Home

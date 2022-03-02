@@ -3,11 +3,11 @@
     <v-img
       sizes="(max-width: 2268px) 100vw, 2268px"
       srcset="
-        background_oqun5d_c_scale,w_700.png 700w,
-        background_oqun5d_c_scale,w_1235.png 1235w,
-        background_oqun5d_c_scale,w_1807.png 1807w,
-        background_oqun5d_c_scale,w_2268.png 2268w"
-      src="background_oqun5d_c_scale,w_2268.png"
+        images/background_oqun5d_c_scale,w_700.png 700w,
+        images/background_oqun5d_c_scale,w_1235.png 1235w,
+        images/background_oqun5d_c_scale,w_1807.png 1807w,
+        images/background_oqun5d_c_scale,w_2268.png 2268w"
+      src="images/background_oqun5d_c_scale,w_2268.png"
       contain
     >
       <v-row
