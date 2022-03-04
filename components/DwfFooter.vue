@@ -74,7 +74,7 @@
             Stay tuned!
           </v-row>
           <v-row class="text-body-2 mt-6">
-            Star us on github, or follow on twitter.
+            Star us on github, follow on twitter or chat on slack.
           </v-row>
           <v-row class="text-body-2 ">
             <v-btn icon aria-label="link to our github account" href="https://github.com/it-at-m/digiwf-project" class="px-1">
@@ -82,11 +82,12 @@
                 mdi-github
               </v-icon>
             </v-btn>
-            <v-btn icon aria-label="link to our twitter account" href="https://twitter.com/digiwf_munich" class="px-1">
+            <v-btn icon aria-label="opens our twitter account in a new tab" href="https://twitter.com/digiwf_munich" target="_blank" class="px-1">
               <v-icon>
                 mdi-twitter
               </v-icon>
             </v-btn>
+            <dwf-slack-button />
           </v-row>
         </v-col>
         <v-col />

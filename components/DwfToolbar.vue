@@ -17,6 +17,7 @@
         mdi-twitter
       </v-icon>
     </v-btn>
+    <dwf-slack-button />
   </v-app-bar>
 </template>
 <script>
