@@ -7,11 +7,7 @@
         </span>
     </v-toolbar-title>
     <v-spacer />
-    <v-btn aria-label="link to our github account" icon  href="https://github.com/it-at-m/digiwf-project" class="px-1">
-      <v-icon>
-        mdi-github
-      </v-icon>
-    </v-btn>
+    <dwf-github-button />
     <dwf-twitter-button />
     <dwf-slack-button />
   </v-app-bar>

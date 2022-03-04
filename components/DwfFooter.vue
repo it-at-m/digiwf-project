@@ -77,11 +77,7 @@
             Star us on github, follow on twitter or chat on slack.
           </v-row>
           <v-row class="text-body-2 ">
-            <v-btn icon aria-label="link to our github account" href="https://github.com/it-at-m/digiwf-project" class="px-1">
-              <v-icon>
-                mdi-github
-              </v-icon>
-            </v-btn>
+            <dwf-github-button />
             <dwf-twitter-button />
             <dwf-slack-button />
           </v-row>
