@@ -7,16 +7,9 @@
         </span>
     </v-toolbar-title>
     <v-spacer />
-    <v-btn aria-label="link to our github account" icon  href="https://github.com/it-at-m/digiwf-project" class="px-1">
-      <v-icon>
-        mdi-github
-      </v-icon>
-    </v-btn>
-    <v-btn aria-label="link to our twitter account" icon  href="https://twitter.com/digiwf_munich" class="px-1">
-      <v-icon>
-        mdi-twitter
-      </v-icon>
-    </v-btn>
+    <dwf-github-button />
+    <dwf-twitter-button />
+    <dwf-slack-button />
   </v-app-bar>
 </template>
 <script>
