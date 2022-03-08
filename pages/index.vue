@@ -22,17 +22,17 @@
           lg="5"
           xl="4"
         >
-          <v-sheet class="pa-3" color="rgb(255,255,255, 0.9)">
-            <div class="text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4 font-weight-black mb-1 mb-xl-5 mb-lg-4 mb-md-3 mb-sm-2">
+          <v-sheet class="py-0 py-xl-3 py-lg-3 py-md-2 py-sm-1 px-3" color="rgb(255,255,255, 0.9)">
+            <div class="text-h6 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4 font-weight-black mb-0 mb-xl-5 mb-lg-4 mb-md-3 mb-sm-2">
               processes.
             </div>
-            <div class="text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4 font-weight-black mb-1 mb-xl-5 mb-lg-4 mb-md-3 mb-sm-2">
+            <div class="text-h6 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4 font-weight-black mb-0 mb-xl-5 mb-lg-4 mb-md-3 mb-sm-2">
               forms.
             </div>
-            <div class="text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4 font-weight-black mb-1 mb-xl-5 mb-lg-4 mb-md-3 mb-sm-2">
+            <div class="text-h6 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4 font-weight-black mb-0 mb-xl-5 mb-lg-4 mb-md-3 mb-sm-2">
               integration.
             </div>
-            <div class="subheading">
+            <div class="caption text-xl-subtitle-1 text-lg-subtitle-1 text-md-subtitle-2 text-sm-body-2">
               build your end2end process app today!
             </div>
           </v-sheet>
