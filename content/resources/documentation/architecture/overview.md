@@ -2,6 +2,7 @@
 title: DigiWF Overview
 description: What is the DigiWF architecture from an astronauts view.
 category: 'Architecture'
+categoryIcon: 'mdi-floor-plan'
 position: 1
 ---
 
