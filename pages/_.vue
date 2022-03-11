@@ -1,7 +1,7 @@
 <template>
   <v-container fluid>
     <v-row v-if="mobile">
-      <dwf-navigation-drawer :navigation="navigation" hide-overlay width="100%" />
+      <dwf-navigation-drawer :navigation="navigation" hide-overlay elevation="0" width="100%" />
     </v-row>
     <v-row>
       <v-col cols="2" v-if="!mobile">
@@ -51,19 +51,18 @@ export default {
       // load all articles in the requested folder
       navigation = await $content(article.dir).only(['title', 'path', 'category', 'categoryIcon', 'navIcon']).sortBy('position').fetch()
     }
-
     return {
       article, navigation
     }
   },
-  data() {
+  data () {
     return {
       drawer: null
     }
   },
   computed: {
     // indicates, if the page is watched on a mobile device or not.
-    mobile: function() {
+    mobile: function () {
       return this.$vuetify.breakpoint.mobile
     }
   }
