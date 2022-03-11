@@ -59,12 +59,9 @@ export default {
       article, navigation
     }
   },
-  data () {
-      drawer: null
-  },
   computed: {
     // indicates, if the page is watched on a mobile device or not.
-    mobile: function () {
+    mobile () {
       return this.$vuetify.breakpoint.mobile
     }
   }
