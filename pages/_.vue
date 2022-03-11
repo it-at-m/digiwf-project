@@ -8,7 +8,9 @@
         <dwf-navigation-drawer :navigation="navigation" />
       </v-col>
       <v-col cols="12" sm="12" md="12" lg="8" xl="8">
-        <h1 class="mb-6 mt-6 text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4">{{ article.title }}</h1>
+        <h1 class="mb-6 mt-6 text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4">
+          {{ article.title }}
+        </h1>
         <nuxt-content :document="article"></nuxt-content>
       </v-col>
       <!-- If the user uses a mobile device, don't display this column. -->
@@ -19,7 +21,9 @@
         <v-list dense>
           <v-list-item v-for="link in article.toc" :key="link.id" nuxt :to="`#${link.id}`">
             <v-list-item-content>
-              <v-list-item-title :class="{ 'ml-3': link.depth === 3 }">{{ link.text }}</v-list-item-title>
+              <v-list-item-title :class="{ 'ml-3': link.depth === 3 }">
+                {{ link.text }}
+              </v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -56,9 +60,7 @@ export default {
     }
   },
   data () {
-    return {
       drawer: null
-    }
   },
   computed: {
     // indicates, if the page is watched on a mobile device or not.
