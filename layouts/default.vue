@@ -8,6 +8,7 @@
   </v-app>
 </template>
 <style>
+
 .nuxt-content a {
   color: black;
 }

@@ -11,9 +11,9 @@
     "lint": "npm run lint:js"
   },
   "dependencies": {
-    "@nuxt/content": "^1.14.0",
+    "@nuxt/content": "^1.15.1",
     "core-js": "^3.21.1",
-    "nuxt": "^2.15.7",
+    "nuxt": "^2.15.8",
     "vuetify": "^2.6.4"
   },
   "devDependencies": {
@@ -25,6 +25,7 @@
     "@nuxtjs/vuetify": "^1.12.1",
     "eslint": "^8.10.0",
     "eslint-plugin-nuxt": "^3.1.0",
-    "eslint-plugin-vue": "^8.5.0"
+    "eslint-plugin-vue": "^8.5.0",
+    "sass-loader": "^10.2.1"
   }
 }
