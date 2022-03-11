@@ -12,7 +12,7 @@
     </v-list-item>
     <v-divider />
     <v-list nav dense>
-      <v-list-item v-for='nav in navigation' :key='nav.path' nuxt :to='nav.path'>
+      <v-list-item v-for="nav in navigation" :key="nav.path" nuxt :to="nav.path">
         <v-list-item-content>
           <v-list-item-title>
             {{ nav.title }}
@@ -24,7 +24,7 @@
 </template>
 <script>
 export default {
-  name: "DwfNavigationDrawer.vue",
+  name: 'DwfNavigationDrawer.vue',
   props: {
     navigation: Array
   },
