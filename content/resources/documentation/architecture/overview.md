@@ -19,8 +19,6 @@ lazy-src="images/resources/documentation/architecture/preview_digiwf_concept_pro
 
 The main goal of DigiWF is to create a declarative way for process designers to interact with a technical infrastructure. For this we've created some supporting services around the opensource [camunda](https://camunda.com/) workflow:
 
-[comment]: <> (![Foo]&#40;images/resources/documentation/architecture/digiwf_concept.png&#41;)
-
 
 - Process Service: This is the service where Camunda is embedded. It is used mainly to execute the BPMN workflows.
 - Service Instance: This handles any kind of service instances. A service instance can be a process, but does not 
