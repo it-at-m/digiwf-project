@@ -24,25 +24,14 @@ DigiWF provides four core competencies:
 - An integration layer towards the backend. Everything that has an interface can be connected via it. If there is no interface, an RPA service can still be used. In order to be able to quickly integrate your own methods into the processes, a number of "ready-to-use" modules are provided in the form of Spring Starters. These can be used to solve recurring problems - such as handling incoming or outgoing files (e.g. e-mails with attachments) - in a standardized way. Just insert a starter and use the API.
 - A co-creation area to give non-technical users the opportunity to model their processes, decision tables and forms and even to deploy them on the platform. A separate Web IDE was created for this purpose, which can be used easily via the browser.
 
-The main goal of DigiWF is to create a declarative way for process designers to interact with a technical infrastructure. For this we've created some supporting services around the opensource [camunda](https://camunda.com/) workflow:
-
-
-- Process Service: This is the service where Camunda is embedded. It is used mainly to execute the BPMN workflows.
-- Service Instance: This handles any kind of service instances. A service instance can be a process, but does not 
-  have to do. 
-- Task Service: This service handles everything we need for human tasks (authorization, mapping, back channel, ...).
-- Form & Validation Service: Everything we need in connection with forms is processed. We save the form definition and perform all kinds of form validation.
-- Service Definition Service: This service is responsible for service definitions and the corresponding configurations.  
-
-
 ## Core Modules
 <figure>
 <v-img alt="The DigiWF architecture with attached custom components like frone end, microservices and integration 
 artifacts. You can see the four provided DigiWF modules core, tasklist, integration and co-creation." contain 
 max-width="960" 
-src="images/resources/documentation/architecture/digiwf_core_modules.
+src="images/resources/documentation/architecture/digiwf_how_to_integrate_your_app.
 png" 
-lazy-src="images/resources/documentation/architecture/preview_digiwf_core_modules.png" ></v-img>
+lazy-src="images/resources/documentation/architecture/preview_digiwf_how_to_integrate_your_app.png" ></v-img>
 <figcaption>The DigiWF Modules + possibilities to integrate custom components</figcaption>
 </figure>
 
@@ -67,6 +56,23 @@ Of course - if you'll use Spring Boot in your backend components and VueJs as fr
 ### DigiWF Core
 DigiWF Core is the heart of DigiWF. As you can see in the section above it consists of 5 services. It has a GraphQL 
 API to interact with frontend applications and a very generic API, that communicates with various backend systems over an event bus.
+
+<figure>
+<v-img alt="The five services inside digiwf core: Service Definition, Form + Validation, Task, Service Instance and 
+Process Engine" contain max-width="960" 
+src="images/resources/documentation/architecture/digiwf_core_services.png" 
+lazy-src="images/resources/documentation/architecture/preview_digiwf_core_services.png" ></v-img>
+<figcaption>The DigiWF Core Services</figcaption>
+</figure>
+
+The main goal of DigiWF is to create a declarative way for process designers to interact with a technical infrastructure. For this we've created some supporting services around the opensource [camunda](https://camunda.com/) workflow:
+
+- Process Service: This is the service where Camunda is embedded. It is used mainly to execute the BPMN workflows.
+- Service Instance: This handles any kind of service instances. A service instance can be a process, but does not
+  have to do.
+- Task Service: This service handles everything we need for human tasks (authorization, mapping, back channel, ...).
+- Form & Validation Service: Everything we need in connection with forms is processed. We save the form definition and perform all kinds of form validation.
+- Service Definition Service: This service is responsible for service definitions and the corresponding configurations.
    
 ### DigiWF Integration
 If you want to integrate any kind of backend system, you can do this via the integration layer. DigiWF integration is on one side a set of predefined integration artifacts like S3, Mail, JMS or other. On the other side is DigiWF integration a toolbox, to help you to build own integration artifacts as quick as possible. 
