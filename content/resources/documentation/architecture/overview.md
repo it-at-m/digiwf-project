@@ -12,8 +12,8 @@ DigiWF is the glue between your frontend and backend systems. Everything you can
 <figure>
 <v-img alt="The concept behind DigiWF. In the middle are your business processes, that can talk to your backend or 
 the cloud via integration artifacts." contain max-width="960" 
-src="images/resources/documentation/architecture/digiwf_concept.png" 
-lazy-src="images/resources/documentation/architecture/preview_digiwf_concept.png" ></v-img>
+src="images/resources/documentation/architecture/digiwf_concept_process_and_integrationplatform.png" 
+lazy-src="images/resources/documentation/architecture/preview_digiwf_concept_process_and_integrationplatform.png" ></v-img>
 <figcaption>Interaction DigWF Core & the surrounding systems</figcaption>
 </figure>
 
