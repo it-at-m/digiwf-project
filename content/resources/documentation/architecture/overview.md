@@ -75,7 +75,16 @@ The main goal of DigiWF is to create a declarative way for process designers to 
 - Service Definition Service: This service is responsible for service definitions and the corresponding configurations.
    
 ### DigiWF Integration
-If you want to integrate any kind of backend system, you can do this via the integration layer. DigiWF integration is on one side a set of predefined integration artifacts like S3, Mail, JMS or other. On the other side is DigiWF integration a toolbox, to help you to build own integration artifacts as quick as possible. 
+<figure>
+<v-img alt="The DigiWF concept, how to create own integration artifacts based on different Spring Boot Starters like 
+Mail or S3 file service." contain
+max-width="960"
+src="images/resources/documentation/architecture/digiwf_how_to_build_your_own_service.
+png"
+lazy-src="images/resources/documentation/architecture/preview_digiwf_how_to_build_your_own_service.png" ></v-img>
+<figcaption>A sample how you can build a custom integration artifact based on our starters</figcaption>
+</figure>
+If you want to integrate any kind of backend system, you can do this via the integration layer. DigiWF integration is on one side a set of predefined integration artifacts like S3, Mail, JMS or other. On the other side is DigiWF integration a toolbox, to help you to build own integration artifacts as quick as possible. This is ensured by the consistent use of Spring Boot starters to implement basic functionalities.
 
 ### DigiWF Tasklist
 This is a simple frontend to interact with running process instances. Every user task occurs on the tasklist and can be picked up (of course only if you have the right to). You can see the state of "your" processes and you can start new instances over the tasklist. If you don't like such a highly standardized frontend, you're free to use the components like the form builder and integrate them into your own beautiful web app. Or you can use the API directly and build all the fancy frontend stuff on your own, in the technology you like most.   
@@ -84,7 +93,7 @@ This is a simple frontend to interact with running process instances. Every user
 The DigiWF Co-Creation section is the low code area. Here can a process designer can draw BPMN processes, tinkering 
 with decision tables (DMN) or create webforms per drag and drop. Deployment into different infrastructures is possible over this web app, too. 
 <figure>
-<v-img contain max-width="1200" alt="A picture of the DigiWF form builder wich is a part of the co-creation 
+<v-img contain max-width="960" alt="A picture of the DigiWF form builder wich is a part of the co-creation 
 application."  src="images/resources/documentation/architecture/form_builder.png" 
 lazy-src="images/resources/documentation/architecture/preview_form_builder.png" ></v-img>
 <figcaption>The DigiWF Form Builder</figcaption>
