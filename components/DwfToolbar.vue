@@ -15,9 +15,9 @@
   </v-app-bar>
 </template>
 <script>
-import DwfLanguageSwitcher from "./DwfLanguageSwitcher";
+import DwfLanguageSwitcher from './DwfLanguageSwitcher'
 export default {
-  components: {DwfLanguageSwitcher},
+  components: { DwfLanguageSwitcher },
   methods: {
     /**
      * Sends the user back to the landing page

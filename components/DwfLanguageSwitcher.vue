@@ -21,7 +21,7 @@
 </template>
 <script>
 export default {
-  name: "DwfLanguageSwitcher",
+  name: 'DwfLanguageSwitcher',
   computed: {
     availableLocales () {
       const locales = this.$i18n.locales.filter(i => i.code !== this.$i18n.locale)
