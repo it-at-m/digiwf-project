@@ -1,7 +1,7 @@
 <template>
   <v-menu offset-y rounded="lg">
     <template v-slot:activator="{ attrs, on }">
-      <v-btn v-bind="attrs" v-on="on" class="px-1">
+      <v-btn :aria-label="$t('toolbar.language.aria')" v-bind="attrs" v-on="on" class="px-1">
         <v-icon>
           mdi-translate
         </v-icon>

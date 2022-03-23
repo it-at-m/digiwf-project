@@ -20,5 +20,21 @@
       "title": "Stay tuned!",
       "text": "Star us on github, follow on twitter or chat on slack."
     }
+  },
+  "toolbar": {
+    "language": {
+      "aria": "You can switch the language here."
+    }
+  },
+  "social": {
+    "github": {
+      "aria": "link to our github account"
+    },
+    "twitter": {
+      "aria": "opens our twitter account in a new tab"
+    },
+    "slack": {
+      "aria": "opens our slack channel in a new tab"
+    }
   }
 }
