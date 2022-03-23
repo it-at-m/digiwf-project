@@ -50,6 +50,7 @@
           <h1 class="mb-6 mt-6 text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4">
             {{ history.title }}
           </h1>
+          <p>{{ $t('index.foo') }}</p>
           <article>
             <nuxt-content :document="history"></nuxt-content>
           </article>

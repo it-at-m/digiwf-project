@@ -1,0 +1,24 @@
+{
+  "index": {
+    "foo": "This is a test"
+  },
+  "footer": {
+    "about": {
+      "title": "About",
+      "coc": "Code of Conduct",
+      "contact": "Contact us",
+      "impress": "Impress"
+    },
+    "ecosystem": {
+      "title": "Ecosystem"
+    },
+    "resources": {
+      "title": "Resources",
+      "architecture": "Architecture"
+    },
+    "social": {
+      "title": "Stay tuned!",
+      "text": "Star us on github, follow on twitter or chat on slack."
+    }
+  }
+}
