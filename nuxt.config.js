@@ -55,8 +55,8 @@ export default {
   // i18n configuration
   i18n: {
     locales: [
-      { code: 'en', iso: 'en-GB', file: 'en.json' },
-      { code: 'de', iso: 'de-DE', file: 'de.json' }
+      { code: 'en', iso: 'en-GB', file: 'en.json', name: 'English' },
+      { code: 'de', iso: 'de-DE', file: 'de.json', name: 'Deutsch' }
     ],
     defaultLocale: 'en',
     langDir: 'locales',
