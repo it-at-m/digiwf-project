@@ -11,7 +11,7 @@
         <h1 class="mb-6 mt-6 text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4">
           {{ article.title }}
         </h1>
-        <nuxt-content :document="article"></nuxt-content>
+        <nuxt-content :document="article" tag="article"></nuxt-content>
       </v-col>
       <!-- If the user uses a mobile device, don't display this column. -->
       <v-col cols="2" v-if="!mobile">
