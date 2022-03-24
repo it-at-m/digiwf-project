@@ -2,6 +2,10 @@
   "index": {
     "foo": "This is a test"
   },
+  "documentation": {
+    "lastchange": "Letzte Änderung",
+    "toc": "Inhaltsverzeichnis"
+  },
   "footer": {
     "about": {
       "title": "Das Projekt",

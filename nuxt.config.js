@@ -61,7 +61,23 @@ export default {
     defaultLocale: 'en',
     langDir: 'locales',
     vueI18n: {
-      fallbackLocale: 'en'
+      fallbackLocale: 'en',
+      dateTimeFormats: {
+        en: {
+          short: {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+          }
+        },
+        de: {
+          short: {
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric'
+          }
+        }
+      }
     }
   },
 

@@ -11,12 +11,13 @@
         <h1 class="mb-6 mt-6 text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4">
           {{ article.title }}
         </h1>
+        <p class="text-caption">{{ $t('documentation.lastchange') }}: {{ $d(new Date(article.createdAt), 'short') }}</p>
         <nuxt-content :document="article" tag="article"></nuxt-content>
       </v-col>
       <!-- If the user uses a mobile device, don't display this column. -->
       <v-col cols="2" v-if="!mobile">
         <div class="subtitle-1 grey--text text--darken-1 mt-6 mb-4">
-          Table of contents
+          {{ $t('documentation.toc') }}
         </div>
         <v-list dense>
           <v-list-item v-for="link in article.toc" :key="link.id" nuxt :to="`#${link.id}`">
