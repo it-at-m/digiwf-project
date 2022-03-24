@@ -13,6 +13,21 @@
         </h1>
         <p class="text-caption">{{ $t('documentation.lastchange') }}: {{ $d(new Date(article.createdAt), 'short') }}</p>
         <nuxt-content :document="article" tag="article"></nuxt-content>
+        <v-row>
+          <v-btn v-if="prev" small text nuxt :to="prev.path" :aria-label="`${$t('documentation.prev')}: ${prev.title}`" class="my-5">
+            <v-icon>
+              mdi-arrow-left
+            </v-icon>
+            {{ prev.title }}
+          </v-btn>
+          <v-spacer />
+          <v-btn v-if="next" small text nuxt :to="next.path" :aria-label="`${$t('documentation.next')}: ${next.title}`" class="my-5">
+            {{ next.title }}
+            <v-icon>
+              mdi-arrow-right
+            </v-icon>
+          </v-btn>
+        </v-row>
       </v-col>
       <!-- If the user uses a mobile device, don't display this column. -->
       <v-col cols="2" v-if="!mobile">
@@ -53,6 +68,8 @@ export default {
     // load the requested *.md file
     const [article] = await $content({ deep: true }).where({ path }).fetch()
     let navigation = []
+    let prev = null
+    let next = null
 
     if (!article) {
       // nothing found? nirwana!
@@ -60,9 +77,29 @@ export default {
     } else {
       // load all articles in the requested folder
       navigation = await $content(article.dir).only(['title', 'path', 'category', 'categoryIcon', 'navIcon']).sortBy('position').fetch()
+
+      // load prev and next
+      console.log(article.dir)
+      console.log(article.path)
+      console.log(article.slug)
+      const [p, n] = await $content(article.dir)
+        .only(['title', 'path'])
+        .sortBy('position')
+        .surround(article.path)
+        .fetch()
+
+      console.log(p)
+      console.log(n)
+      if(p) {
+        prev = p
+      }
+
+      if(n) {
+        next = n
+      }
     }
     return {
-      article, navigation
+      article, navigation, prev, next
     }
   },
   computed: {

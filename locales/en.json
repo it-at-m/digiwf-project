@@ -4,7 +4,9 @@
   },
   "documentation": {
     "lastchange": "Last Change",
-    "toc": "Table of contents"
+    "toc": "Table of contents",
+    "prev": "previous page",
+    "next": "next page"
   },
   "footer": {
     "about": {

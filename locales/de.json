@@ -4,7 +4,9 @@
   },
   "documentation": {
     "lastchange": "Letzte Änderung",
-    "toc": "Inhaltsverzeichnis"
+    "toc": "Inhaltsverzeichnis",
+    "prev": "vorherige Seite",
+    "next": "nächste Seite"
   },
   "footer": {
     "about": {
