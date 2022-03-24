@@ -49,7 +49,35 @@ Fehlerhandling abgebildet werden. Wichtig ist, dass der Subprozess ein eigenes `
 eingehenden Parameter entsprechen den Werten, die der Subprozess zum Aufruf erwartet. Die ausgehenden 
 Parameter sind diejenigen, die der Subprozess am Ende zurückgibt.
 
+## Eigene Integrationsartefakte erstellen
+<figure>
+<v-img alt="Es wird dargestellt, wie man vorhandenene Spring Boot Starter Komponenten einbinden kann, um einen 
+eigenen Integratiosnartefakt zu erstellen." contain 
+max-width="960" 
+src="images/resources/documentation/architecture/integration/digiwf_how_to_build_a_integration_artifact.png" 
+lazy-src="images/resources/documentation/architecture/integration/preview_digiwf_how_to_build_a_integration_artifact.png" ></v-img>
+<figcaption>Beispielhafte Nutzung von Spring Boot Startern um einen eigenen Integrationsartefakt zu 
+erstellen</figcaption>
+</figure>
 
+Um es möglichst einfach zu machen, eigene Integrations Artefakte oder Micro Services zu erstellen, bieten wir 
+Basisfunktionalitäten in Form von `Spring Boot Startern` [^2] an. Diese können einfach über das entsprechende 
+Dependency Management (Maven, Gradle, etc.) in das Projekt eingebunden werden. Danach stehen sie zur Nutzung bereit. 
+D.h. sie können über die `application.yaml` des Projektes (hier `your-own-mail-integration`) konfiguriert werden. 
+Das ist sinnvoll, um zwar die individuellen umgebungsspezifischen Parameter für ein System setzen zu können - aber 
+trotzdem die standardisierte Nutzung nichts selbst implementieren zu müssen.
 
+Im Beispiel oben wird ein `your-own-mail-integration` Service erstellt. Dieser behandelt eingehende und ausgehende 
+Mails. Wenn man den `digiwf-mail-integration-starter` einbindet, so bekommt man automatisch eine Anbindung an den S3 
+Service mit. Mails können ja Datei Anhänge enthalten, die man nicht im Prozess haben will. D.h. bei eingehenden 
+Anhängen werden diese vorab im Datei Speicher gespeichert und die Referenz an den Prozess weiter gegeben. Bei 
+ausgehenden Mails ist es genau anders herum. Der Prozess stellt eine Referenz auf die Datei(en) zur Verfügung, mit 
+der diese aus dem Datei Speicher geladen werden und an die E-Mail gehängt werden können. Diese Logik - Dateianhänge 
+über den Datei Speicher zu verarbeiten - ist bereits komplett `digiwf-mail-integration-starter` und 
+`digiwf-s3-integration-client-starter` enthalten. D.h. um einen Mail Server anzubinden, muss im besten Fall nichts 
+mehr programmiert werden. Man erstellt nur ein Spring Boot Projekt (z.B. über [^3]), bindet die Starter ein und kann 
+mit der richtigen Konfiguration sofort arbeiten.
 
 [^1]: Siehe https://docs.camunda.io/docs/components/modeler/desktop-modeler/element-templates/about-templates/
+[^2]: Siehe https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using.build-systems.starters
+[^3]: Siehe https://start.spring.io/
