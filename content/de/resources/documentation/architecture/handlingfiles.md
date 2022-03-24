@@ -1,6 +1,6 @@
 ---
-title: Handling files
-description: How can (large) files be handle in processes?
+title: Umgang mit Dateien
+description: Wie können (große und kleine) Dateien auf der Prozessplattform verwaltet werden?
 category: 'Architektur'
 categoryIcon: 'mdi-floor-plan'
 position: 3
