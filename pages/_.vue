@@ -41,9 +41,13 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     VImg
   },
-  async asyncData ({ $content, params, error }) {
+  async asyncData ({ $content, params, error, app }) {
+    // Get correct locale, delete first '/' and add a '/' to the end.
+    // So we can get a localized source string for default (/) and all other
+    let locale = app.localePath('/') + '/'
+    locale = locale.replace('\//', '/')
     // get url params
-    const path = `/${params.pathMatch || 'index'}`
+    const path = `${locale}${params.pathMatch || 'index'}`
     // load the requested *.md file
     const [article] = await $content({ deep: true }).where({ path }).fetch()
     let navigation = []

@@ -1,7 +1,7 @@
 ---
 title: Self Service
 description: How can new processes or forms brought to the plattform?
-category: 'Architecture'
+category: 'Architektur'
 categoryIcon: 'mdi-floor-plan'
 position: 4
 ---

@@ -1,12 +1,12 @@
 ---
-title: DigiWF Overview
-description: What is the DigiWF architecture from an astronauts view.
-category: 'Architecture'
+title: DigiWF Architektur Übersicht
+description: Was ist DigiWF aus 20K Meter Höhe.
+category: 'Architektur'
 categoryIcon: 'mdi-floor-plan'
 position: 1
 ---
 
-DigiWF is the glue between your frontend and backend systems. Everything you can reach over a network connection, you can attach to DigiWF and use ist declarative in your BPMN processes. We're the bridge between the developer team and process designers.
+DigiWF ist das Bindeglied zwischen Ihren Frontend- und Backend-Systemen. Alles, was Sie über eine Netzwerkverbindung erreichen können, können Sie an DigiWF anhängen und deklarativ in Ihren BPMN-Prozessen verwenden. Wir sind die Brücke zwischen dem Entwicklerteam und den Prozessdesignern.
 
 ## The DigiWF Platform Concept
 <figure>
@@ -17,35 +17,40 @@ lazy-src="images/resources/documentation/architecture/preview_digiwf_concept_pro
 <figcaption>Interaction DigWF Core & the surrounding systems</figcaption>
 </figure>
 
-DigiWF provides four core competencies:
+DigiWF stellt vier Kernkompetenzen zur Verfügung:
 
-- A process layer (DigiWF Core), in which of course the process instances and decision tables (DMN) based on Camunda BPMN are executed. But also the form descriptions are saved, or user tasks are executed.
-- An integration layer towards the frontend. Interfaces and/or forms are made available here at runtime, which can be used in your own (frontend) applications. Alternatively, the completed task list can be used to process user tasks or display the status of a workflow.
-- An integration layer towards the backend. Everything that has an interface can be connected via it. If there is no interface, an RPA service can still be used. In order to be able to quickly integrate your own methods into the processes, a number of "ready-to-use" modules are provided in the form of Spring Starters. These can be used to solve recurring problems - such as handling incoming or outgoing files (e.g. e-mails with attachments) - in a standardized way. Just insert a starter and use the API.
-- A co-creation area to give non-technical users the opportunity to model their processes, decision tables and forms and even to deploy them on the platform. A separate Web IDE was created for this purpose, which can be used easily via the browser.
+- Einen Prozesslayer (DigiWF Core), in dem natürlich die Prozessinstanzen und Entscheidungstabellen (DMN) auf Basis von Camunda BPMN ausgeführt werden. Aber auch die Formularbeschreibungen gespeichert, oder User Tasks ausgeführt werden.
+- Einen Integrations Layer Richtung frontend. Hier werden zur Laufzeit Schnittstellen und / oder Formulare zur Verfügung gestellt, die man in eigenen (Frontend) Anwendungen nutzen kann. Alternativ kann die fertige Tasklist verwendet werden, um User Tasks abzuarbeiten, oder den Stand eines Workflows anzuzeigen.
+-  Einen Integrationslayer richtung Backend. Über den kann alles was eine Schnittstelle hat angebunden werden. Hat es keine Schnittstelle, kann immer noch ein RPA Dienst verwendet werden. Um schnell eigene Verfahren in die Prozesse einbinden zu können, werden eine Reihe von "ready to use" Bausteinen in Form von Spring Startern zur Verfügung gestellt. Diese können genutzt werden, um wiederkehrende Problemstellung - wie beispielsweise der Umgang mit ein- oder ausgehenden Dateien (z.B. E-Mail mit Anhang) - standardisiert zu lösen. Einfach Starter einfügen und die API nutzen.
+-  Einen Co-Creation Bereich, um auch nicht technischen Nutzern die Möglichkeit zu geben ihre Prozesse, entscheidungstabellen und Formulare modellieren und sogar auf der Plattform ausbringen zu können. Dafür wurde eine eigene Web IDE erstellt, die einfach über den Browser genutzt werden kann.
 
 ## Core Modules
 <figure>
-<v-img alt="The DigiWF architecture with attached custom components like frone end, microservices and integration 
-artifacts. You can see the four provided DigiWF modules core, tasklist, integration and co-creation." contain 
+<v-img alt="Das Konzept hinter DigiWF wird dargestellt. In der Mitte ist DigiWF Core (der Prozess Layer) dargestellt.
+Nach oben haben wir eine Integration Richtung GUI, nach unten eine Integration in die Verfahrenslandschaft. Rechts 
+ist als Build Komponente das Co-Creation dargestellt." contain 
 max-width="960" 
 src="images/resources/documentation/architecture/digiwf_how_to_integrate_your_app.
 png" 
 lazy-src="images/resources/documentation/architecture/preview_digiwf_how_to_integrate_your_app.png" ></v-img>
-<figcaption>The DigiWF Modules + possibilities to integrate custom components</figcaption>
+<figcaption>Die Kern Komponenten</figcaption>
 </figure>
 
-The picture above shows a possible "full blown" DigiWF architecture including self crafted artifacts. Everything in 
-blue is provided by the DigiWF project, but we're open for integrations. So you could create and integrate:
+Das Bild oben zeigt eine mögliche "ausgewachsene" DigiWF-Architektur einschließlich selbst erstellter Artefakte. Alles in
+Blau wird vom DigiWF-Projekt bereitgestellt, aber wir sind offen für Integrationen. Es könnten also folgende Artefakte 
+erstellen und integriert werden:
 
-- your own frontends
-- your own integration artifacts to communicate with your on premise or cloud infrastructure
-- your own (micro) services
+- eigene Frontends (Die Technologie ist nichjt wirklich entscheidend - wenn man aber beispielsweise unsere 
+  Formurlarkomponente verwenden will, dann geht das mit VueJs am besten)
+- eigene Integrationsartefakte zur Kommunikation mit der On-Premise- oder Cloud-Infrastruktur
+- eigene (Mikro-)Services
 
-You can use any technology you want. There're only two preconditions:
+Es kann jede beliebige Technologie verwenden werden. Bestens unterstützt wird man aber, wenn im Frontend VueJS (mit 
+VuetifyJs) und in den Integrations- oder anderen Services Spring Boot verwendet wird. Es gibt nur zwei Voraussetzungen:
 
-- your frontend technology must have a GraphQL client
-- your backen (services, integration artifacts) must be able to communicate with one of [Spring Cloud Streams](https://spring.io/projects/spring-cloud-stream) supported Binder implementations.
+- Die Frontend-Technologie muss über einen GraphQL-Client verfügen
+- Das Backend (Dienste, Integrationsartefakte) muss in der Lage sein, mit einer der von [Spring Cloud Streams]
+  (https://spring.io/projects/spring-cloud-stream) unterstützten Binder-Implementierungen zu kommunizieren.
 
 <v-alert color="yellow darken-1" border="left" elevation="2" colored-border icon="mdi-robot-confused">
 If you want use another EventBus infrastructure than Apache Kafka, you have to configure this in your DigiWF configurations.

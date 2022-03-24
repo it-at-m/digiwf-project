@@ -5,6 +5,9 @@
         <v-icon>
           mdi-translate
         </v-icon>
+        <v-icon>
+          mdi-chevron-down
+        </v-icon>
       </v-btn>
     </template>
     <v-list>
