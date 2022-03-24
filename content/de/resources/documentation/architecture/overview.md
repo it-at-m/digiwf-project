@@ -53,55 +53,70 @@ VuetifyJs) und in den Integrations- oder anderen Services Spring Boot verwendet 
   (https://spring.io/projects/spring-cloud-stream) unterstützten Binder-Implementierungen zu kommunizieren.
 
 <v-alert color="yellow darken-1" border="left" elevation="2" colored-border icon="mdi-robot-confused">
-If you want use another EventBus infrastructure than Apache Kafka, you have to configure this in your DigiWF configurations.
+Wenn eine andere Event Bus Infrastruktur verwendet werden soll, als Apache Kafka, so kann dies in der DigiWF 
+Konfiguration erfolgen.
 </v-alert>
 
 Of course - if you'll use Spring Boot in your backend components and VueJs as front end technology, you can use all cross-section components (like Spring Boot Starters, NPM components, ...) we have created for our components.
 
 ### DigiWF Core
-DigiWF Core is the heart of DigiWF. As you can see in the section above it consists of 5 services. It has a GraphQL 
-API to interact with frontend applications and a very generic API, that communicates with various backend systems over an event bus.
+DigiWF Core ist das Herzstück von DigiWF und besteht aus 5 Diensten. Zur Interaktion mit Frontend-Anwendungen gibt 
+es eine Graph-QL API. Zusätzlich eine sehr generische API, die über einen Event Bus mit verschiedenen 
+Backend-Systemen kommuniziert.
 
 <figure>
-<v-img alt="The five services inside digiwf core: Service Definition, Form + Validation, Task, Service Instance and 
+<v-img alt="Die fünf Services in Digiwf Core: Service Definition, Form + Validation, Task, Service Instance and 
 Process Engine" contain max-width="960" 
 src="images/resources/documentation/architecture/digiwf_core_services.png" 
 lazy-src="images/resources/documentation/architecture/preview_digiwf_core_services.png" ></v-img>
-<figcaption>The DigiWF Core Services</figcaption>
+<figcaption>Die DigiWF Core Services</figcaption>
 </figure>
 
-The main goal of DigiWF is to create a declarative way for process designers to interact with a technical infrastructure. For this we've created some supporting services around the opensource [camunda](https://camunda.com/) workflow:
+Das Hauptziel von DigiWF ist es, eine deklarative Möglichkeit für Prozessdesigner zu schaffen, mit einer technischen Infrastruktur zu interagieren. Dafür haben wir einige unterstützende Dienste rund um den Opensource [camunda](https://camunda.com/)-Workflow erstellt:
 
-- Process Service: This is the service where Camunda is embedded. It is used mainly to execute the BPMN workflows.
-- Service Instance: This handles any kind of service instances. A service instance can be a process, but does not
-  have to do.
-- Task Service: This service handles everything we need for human tasks (authorization, mapping, back channel, ...).
-- Form & Validation Service: Everything we need in connection with forms is processed. We save the form definition and perform all kinds of form validation.
-- Service Definition Service: This service is responsible for service definitions and the corresponding configurations.
+- Prozessdienst: Dies ist der Service, in den Camunda eingebettet ist. Es wird hauptsächlich verwendet, um die 
+  BPMN-Workflows auszuführen.
+- Serviceinstanz: Dies behandelt jede Art von Serviceinstanzen. Eine Serviceinstanz kann ein Prozess sein, muss aber 
+  nicht.
+- Task Service: Dieser Service übernimmt alles, was wir für menschliche Aufgaben benötigen (Autorisierung, Mapping, Rückkanal, ...).
+- Formular- und Validierungsservice: Alles, was wir im Zusammenhang mit Formularen benötigen, wird hier verarbeitet. 
+  Wir speichern die Formulardefinition und führen alle Arten von Formularvalidierungen durch.
+- Servicedefinitionsservice: Dieser Service ist für die Definition eines Services und die entsprechenden 
+  Konfigurationen 
+  zuständig.
    
 ### DigiWF Integration
 <figure>
-<v-img alt="The DigiWF concept, how to create own integration artifacts based on different Spring Boot Starters like 
-Mail or S3 file service." contain
+<v-img alt="Das DigiWF-Konzept, wie man eigene Integrationsartefakte basierend auf verschiedenen Spring Boot 
+Startern wie zum Beispiel Mail- oder S3-Dateidienst." contain
 max-width="960"
 src="images/resources/documentation/architecture/digiwf_how_to_build_your_own_service.
 png"
 lazy-src="images/resources/documentation/architecture/preview_digiwf_how_to_build_your_own_service.png" ></v-img>
-<figcaption>A sample how you can build a custom integration artifact based on our starters</figcaption>
+<figcaption>Ein Beispiel, wie ein benutzerdefiniertes Integrationsartefakt basierend auf unseren Startern 
+erstellt werden kann</figcaption>
 </figure>
-If you want to integrate any kind of backend system, you can do this via the integration layer. DigiWF integration is on one side a set of predefined integration artifacts like S3, Mail, JMS or other. On the other side is DigiWF integration a toolbox, to help you to build own integration artifacts as quick as possible. This is ensured by the consistent use of Spring Boot starters to implement basic functionalities.
+
+Um ein beliebiges Backend-System zu integrieren, kann dies über die Integrationsschicht getan werden. Die 
+DigiWF-Integration ist einerseits eine Reihe vordefinierter Integrationsartefakte wie S3, Mail, JMS oder andere. Auf der anderen Seite ist die DigiWF-Integration eine Toolbox, die hilft, so schnell wie möglich eigene Integrationsartefakte zu erstellen. Dies wird durch die konsequente Verwendung von Spring Boot Startern zur Implementierung von Basisfunktionalitäten gewährleistet.
 
 ### DigiWF Tasklist
-This is a simple frontend to interact with running process instances. Every user task occurs on the tasklist and can be picked up (of course only if you have the right to). You can see the state of "your" processes and you can start new instances over the tasklist. If you don't like such a highly standardized frontend, you're free to use the components like the form builder and integrate them into your own beautiful web app. Or you can use the API directly and build all the fancy frontend stuff on your own, in the technology you like most.   
+Dies ist ein einfaches Frontend zur Interaktion mit laufenden Prozessinstanzen. Jede Benutzeraufgabe kommt auf der 
+Aufgabenliste vor und kann abgeholt werden (natürlich nur, wenn man das Recht dazu hat). Über die Taskliste können 
+Sie den Status „Ihrer“ Prozesse einsehen und neue Instanzen starten. Wem ein so hochgradig standardisiertes Frontend 
+nicht gefällt, kann "ready to use" Komponenten wie den Form Renderer verwenden und in die eigene, schöne Web Anwendung 
+integrieren. 
+Oder man kann die API direkt verwenden und ein schickes Frontend in der gewünschten Technologie selbst erstellen.  
 
 ### DigiWF Co-Creation
-The DigiWF Co-Creation section is the low code area. Here can a process designer can draw BPMN processes, tinkering 
-with decision tables (DMN) or create webforms per drag and drop. Deployment into different infrastructures is possible over this web app, too. 
+Die DigiWF Co-Creation ist der Low-Code-Bereich. Hier kann ein Prozessdesigner BPMN-Prozesse zeichnen, 
+mit Entscheidungstabellen (DMN) herum tüfteln oder Webformulare per Drag and Drop erstellen. Auch das Deployment in 
+verschiedenen Infrastrukturen ist über diese Web-App möglich.
 <figure>
-<v-img contain max-width="960" alt="A picture of the DigiWF form builder wich is a part of the co-creation 
-application."  src="images/resources/documentation/architecture/form_builder.png" 
+<v-img contain max-width="960" alt="Ein Bild des Drag & Drop Form Builders aus dem Co-Creation Bereich."  
+src="images/resources/documentation/architecture/form_builder.png" 
 lazy-src="images/resources/documentation/architecture/preview_form_builder.png" ></v-img>
-<figcaption>The DigiWF Form Builder</figcaption>
+<figcaption>Der DigiWF Form Builder</figcaption>
 </figure>
 
 [comment]: <> (<v-alert color="yellow darken-1" border="left" elevation="2" colored-border icon="mdi-robot-confused">)
