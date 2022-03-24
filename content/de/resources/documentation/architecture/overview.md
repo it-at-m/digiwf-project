@@ -8,7 +8,7 @@ position: 1
 
 DigiWF ist das Bindeglied zwischen Ihren Frontend- und Backend-Systemen. Alles, was Sie über eine Netzwerkverbindung erreichen können, können Sie an DigiWF anhängen und deklarativ in Ihren BPMN-Prozessen verwenden. Wir sind die Brücke zwischen dem Entwicklerteam und den Prozessdesignern.
 
-## The DigiWF Platform Concept
+## Das DigiWF Plattform Konzept
 <figure>
 <v-img alt="The concept behind DigiWF. In the middle are your business processes, that can talk to your backend or 
 the cloud via integration artifacts." contain max-width="960" 
