@@ -45,6 +45,7 @@ export default {
     // Get correct locale, delete first '/' and add a '/' to the end.
     // So we can get a localized source string for default (/) and all other
     let locale = app.localePath('/') + '/'
+    // eslint-disable-next-line
     locale = locale.replace('\//', '/')
     // get url params
     const path = `${locale}${params.pathMatch || 'index'}`
