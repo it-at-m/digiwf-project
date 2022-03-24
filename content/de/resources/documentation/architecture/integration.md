@@ -19,3 +19,21 @@ src="images/resources/documentation/architecture/digiwf_integration_architecture
 lazy-src="images/resources/documentation/architecture/preview_digiwf_integration_architecture.png" ></v-img>
 <figcaption>High Level Integrations Architektur</figcaption>
 </figure>
+
+Ganz abstrakt haben wir im `Application Integration Layer` eine Sammlung von Services, die mit dem `Event Bus` 
+verbunden sind. Dabei ist es erst einmal egal, wo diese Services laufen, bzw. in welcher Technologie sie 
+implementiert sind. Wichtig ist, dass sie mit dem `Event Bus` kommunizieren können. Die "Art" der Services ist auch 
+nicht auf eine Verbindung zwischen der Plattform und einem bereits bestehenden System beschränkt. Hier können auch 
+diverse Microservices direkt angebunden werden.
+
+Im `run` weiß auch der `Business Process Layer` (DigiWF Core) nichts von irgend einem Integrations Service. Die 
+beiden sind tatsächlich lose gekoppelt. Im `build` dagegen müssen die Services, bzw. die Service Operationen, die 
+man aus einem Prozess heraus aufrufen will sehr wohl bekannt sein. Die Verbindung passiert hier durch ein Element 
+Template [^1]. Im Prinzip ist solch ein Template ein Input / Output Mapping. D.h. Die Daten aus dem Prozess werden 
+auf die erwarteten Daten der Operation gemappt und umgekehrt.
+
+
+
+
+
+[^1]: Siehe https://docs.camunda.io/docs/components/modeler/desktop-modeler/element-templates/about-templates/
