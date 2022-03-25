@@ -24,7 +24,11 @@ lazy-src="images/resources/documentation/concept/filehandling/preview_digiwf_fil
 Ein grundlegendes Element bei der Behandlung von Dateien (unabhängig davon, ob sie über die GUI oder angebundene 
 Backend Komponenten in das System gelangen) ist der Datei Speicher. Im Fall von DigiWF ist das ein `S3-Service`. 
 Hier kann eine Cloudlösung wie AWS oder ein on prem Dienst verwendet werden. Die Kommunikation mit dem Dienst an 
-sich wird über eine generisch gültige Schnittstelle abstrahiert. 
+sich wird über eine generisch gültige Schnittstelle abstrahiert.
+
+Grundsätzlich ist es möglich (und bei mehrfacher Nutzung der Plattform empfehlenswert), mehr als einen `S3 Bucket` 
+als Dateispeicher bereitzustellen. Je nach Fachlichkeit kann hier nach Domäne, Prozess oder Abteilung ein eigener `S3 
+Bucket` mit einem eigenen `S3 Service` an die Plattform angebunden werden.
 
 </section>
 <section>
@@ -44,6 +48,22 @@ lazy-src="images/resources/documentation/concept/filehandling/preview_digiwf_inc
 <figcaption>Datei Handling bei eingehenden Dateien</figcaption>
 </figure>
 
+In der Abbildung oben ist zu sehen, wie mit eingehenden Dateien umgegangen wird. 
+
+1. Eine Datei wird erzeugt oder von außen empfangen. 
+2. Um die Dateien zu speichern, wird eine `presigned URL` [^1] am `S3 Service` für die Speicherung abgefragt und 
+   erzeugt. Eine `presigned 
+   URL` ist eine zeitlich begrenzt gültige URL, für eine bestimmte Operation (z.B. `POST`, `PUT`, usw.) die verwendet 
+   werden kann um Dateien direkt an einen `S3 Bucket`zu schicken, ohne eingeloggt sein zu müssen. Wie lange eine solche URL gültig kann eingestellt werden. Für den 
+   hier dargestellten Anwendungsfall funktionieren auch sehr kurze Gültigkeitszeiträume, da es sich hier um eine 
+   rein maschinelle Verarbeitung handelt. Zusätzlich zur URL wird an dieser Stelle noch eine Referenz- oder Datei ID 
+   erzeugt und zurückgegeben.
+3. Mit der URL wird die Datei nun direkt in den S3 Speicher geschrieben. Das geht ohne Umweg über einen weiteren 
+   Service.
+4. Die Datei Referenz wird über den `Event Bus` an den Prozess übergeben. Ab dieser Stelle ist der Prozess dafür 
+   verantwortlich diese Datei ID sorgsam aufzubewahren, denn nur mit dieser Referenz kann man die Datei noch über 
+   den `S3 Service` finden und entsprechend laden.
+
 ### Ausgehende Dateien
 <figure>
 <v-img alt="Es wird gezeigt, wie die Datei Behandlung bei ausgehenden Dateien funktioniert." contain 
@@ -53,10 +73,32 @@ lazy-src="images/resources/documentation/concept/filehandling/preview_digiwf_out
 <figcaption>Datei Handling bei ausgehenden Dateien</figcaption>
 </figure>
 
+In der Abbildung oben ist zu sehen, wie mit ausgehenden Dateien umgegangen wird.
+
+1. Grundvoraussetzung um eine Datei aus dem `S3 Bucket` zu holen ist die Referenz- oder Datei ID. Will man mehrere 
+   Dateien laden - und beispielsweise an eine E-Mail anhängen - so werden auch entsprechend viele Referenz IDs 
+   benötigt. D.h. die Kardinalität zwischen Datei und Referenz ID ist immer 1:1.
+2. Mit der Referenz ID kann am `S3 Service` eine `presigned URL` für die Operation `GET` erfragt werden. Auch hier 
+   gilt - für jede Datei wird eine eigene `presigned URL` benötigt.
+3. Mit der `presigned URL` kann wiederum die Datei direkt aus dem `S3 Bucket` geladen werden.
+4. Die Datei(en) werden an die Mail gehängt und verschickt. 
+
+<v-alert color="red darken-1" border="left" elevation="2" colored-border icon="mdi-robot-angry">
+Es ist übrigends davon abzuraten, eine presigned URL direkt heraus zu geben (beispielsweise per Mail zu 
+verschicken). Wie oben beschrieben ist eine solche URL nur eine bestimmte Zeit gültig. D.h. wenn dieser Zeitraum 
+abgelaufen ist, dann kann über die URL nicht mehr auf die Datei zugegriffen werden. Wenn dann auch noch die 
+Prozessinstanz beendet wurde, hat man auch nicht mehr so einfach zugriff auf die Referenz ID.
+</v-alert>
+
 </section>
 <section>
 
 ## Datei Handling im GUI Integration Layer
+
+</section>
+<section>
+
+[^1]: siehe https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-presigned-url.html
 
 </section>
 
