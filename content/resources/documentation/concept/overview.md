@@ -1,7 +1,7 @@
 ---
 title: DigiWF Overview
 description: What is the DigiWF architecture from an astronauts view.
-category: 'Architecture'
+category: 'Concept'
 categoryIcon: 'mdi-floor-plan'
 position: 1
 ---
@@ -12,8 +12,8 @@ DigiWF is the glue between your frontend and backend systems. Everything you can
 <figure>
 <v-img alt="The concept behind DigiWF. In the middle are your business processes, that can talk to your backend or 
 the cloud via integration artifacts." contain max-width="960" 
-src="images/resources/documentation/architecture/digiwf_concept_process_and_integrationplatform.png" 
-lazy-src="images/resources/documentation/architecture/preview_digiwf_concept_process_and_integrationplatform.png" ></v-img>
+src="images/resources/documentation/concept/digiwf_concept_process_and_integrationplatform.png" 
+lazy-src="images/resources/documentation/concept/preview_digiwf_concept_process_and_integrationplatform.png" ></v-img>
 <figcaption>Interaction DigWF Core & the surrounding systems</figcaption>
 </figure>
 
@@ -29,9 +29,9 @@ DigiWF provides four core competencies:
 <v-img alt="The DigiWF architecture with attached custom components like frone end, microservices and integration 
 artifacts. You can see the four provided DigiWF modules core, tasklist, integration and co-creation." contain 
 max-width="960" 
-src="images/resources/documentation/architecture/digiwf_how_to_integrate_your_app.
+src="images/resources/documentation/concept/digiwf_how_to_integrate_your_app.
 png" 
-lazy-src="images/resources/documentation/architecture/preview_digiwf_how_to_integrate_your_app.png" ></v-img>
+lazy-src="images/resources/documentation/concept/preview_digiwf_how_to_integrate_your_app.png" ></v-img>
 <figcaption>The DigiWF Modules + possibilities to integrate custom components</figcaption>
 </figure>
 
@@ -60,8 +60,8 @@ API to interact with frontend applications and a very generic API, that communic
 <figure>
 <v-img alt="The five services inside digiwf core: Service Definition, Form + Validation, Task, Service Instance and 
 Process Engine" contain max-width="960" 
-src="images/resources/documentation/architecture/digiwf_core_services.png" 
-lazy-src="images/resources/documentation/architecture/preview_digiwf_core_services.png" ></v-img>
+src="images/resources/documentation/concept/digiwf_core_services.png" 
+lazy-src="images/resources/documentation/concept/preview_digiwf_core_services.png" ></v-img>
 <figcaption>The DigiWF Core Services</figcaption>
 </figure>
 
@@ -79,9 +79,9 @@ The main goal of DigiWF is to create a declarative way for process designers to 
 <v-img alt="The DigiWF concept, how to create own integration artifacts based on different Spring Boot Starters like 
 Mail or S3 file service." contain
 max-width="960"
-src="images/resources/documentation/architecture/digiwf_how_to_build_your_own_service.
+src="images/resources/documentation/concept/digiwf_how_to_build_your_own_service.
 png"
-lazy-src="images/resources/documentation/architecture/preview_digiwf_how_to_build_your_own_service.png" ></v-img>
+lazy-src="images/resources/documentation/concept/preview_digiwf_how_to_build_your_own_service.png" ></v-img>
 <figcaption>A sample how you can build a custom integration artifact based on our starters</figcaption>
 </figure>
 If you want to integrate any kind of backend system, you can do this via the integration layer. DigiWF integration is on one side a set of predefined integration artifacts like S3, Mail, JMS or other. On the other side is DigiWF integration a toolbox, to help you to build own integration artifacts as quick as possible. This is ensured by the consistent use of Spring Boot starters to implement basic functionalities.
@@ -94,8 +94,8 @@ The DigiWF Co-Creation section is the low code area. Here can a process designer
 with decision tables (DMN) or create webforms per drag and drop. Deployment into different infrastructures is possible over this web app, too. 
 <figure>
 <v-img contain max-width="960" alt="A picture of the DigiWF form builder wich is a part of the co-creation 
-application."  src="images/resources/documentation/architecture/form_builder.png" 
-lazy-src="images/resources/documentation/architecture/preview_form_builder.png" ></v-img>
+application."  src="images/resources/documentation/concept/form_builder.png" 
+lazy-src="images/resources/documentation/concept/preview_form_builder.png" ></v-img>
 <figcaption>The DigiWF Form Builder</figcaption>
 </figure>
 

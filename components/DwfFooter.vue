@@ -49,7 +49,7 @@
             {{ $t('footer.resources.title') }}
           </v-row>
           <v-row class="text-body-2 mt-6">
-            <NuxtLink class="text-decoration-none white--text" :to="localePath('/resources/documentation/architecture/overview')">
+            <NuxtLink class="text-decoration-none white--text" :to="localePath('/resources/documentation/concept/overview')">
               {{ $t('footer.resources.architecture') }}
             </NuxtLink>
           </v-row>

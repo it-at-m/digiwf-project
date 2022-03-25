@@ -1,7 +1,7 @@
 ---
 title: Handling files
 description: How can (large) files be handle in processes?
-category: 'Architecture'
+category: 'Concept'
 categoryIcon: 'mdi-floor-plan'
 position: 3
 ---

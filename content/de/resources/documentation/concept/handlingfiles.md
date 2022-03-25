@@ -1,7 +1,7 @@
 ---
 title: Umgang mit Dateien
 description: Wie können (große und kleine) Dateien auf der Prozessplattform verwaltet werden?
-category: 'Architektur'
+category: 'Konzept'
 categoryIcon: 'mdi-floor-plan'
 position: 3
 ---

@@ -1,7 +1,7 @@
 ---
 title: System Integration
 description: Wie können die Integrationsartefakte oder Services aus den Prozessen heraus aufgerufen werden?
-category: 'Architektur'
+category: 'Konzept'
 categoryIcon: 'mdi-floor-plan'
 position: 2
 ---
@@ -15,8 +15,8 @@ haben, kann die Anwendung immer noch über einen RPA Dienst angebunden werden.
 <figure>
 <v-img alt="Es wird die Verbindung zwischen DigiWF Core, dem Event Bus und dem Integrationslayer mit diversen 
 Integrations Services (z.B. S3, Mail, LDAP, usw.) gezeigt." contain max-width="960" 
-src="images/resources/documentation/architecture/integration/digiwf_integration_architecture.png" 
-lazy-src="images/resources/documentation/architecture/integration/preview_digiwf_integration_architecture.png" ></v-img>
+src="images/resources/documentation/concept/integration/digiwf_integration_architecture.png" 
+lazy-src="images/resources/documentation/concept/integration/preview_digiwf_integration_architecture.png" ></v-img>
 <figcaption>High Level Integrations Architektur</figcaption>
 </figure>
 
@@ -37,8 +37,8 @@ auf die erwarteten Daten der Operation gemappt und umgekehrt.
 <v-img alt="Es wird dargestellt, wie ein Aufruf eines Integrationsartefaktes mit Hilfe eines Subprozesses aus einem 
 BPMN Prozess heraus aussehen könnte." contain 
 max-width="960" 
-src="images/resources/documentation/architecture/integration/digiwf_integrate_from_process.png" 
-lazy-src="images/resources/documentation/architecture/integration/preview_digiwf_integrate_from_process.png" ></v-img>
+src="images/resources/documentation/concept/integration/digiwf_integrate_from_process.png" 
+lazy-src="images/resources/documentation/concept/integration/preview_digiwf_integrate_from_process.png" ></v-img>
 <figcaption>Beispielhafte Nutzung eines Integrationsartefaktes aus einem BPMN Prozess heraus</figcaption>
 </figure>
 
@@ -54,8 +54,8 @@ Parameter sind diejenigen, die der Subprozess am Ende zurückgibt.
 <v-img alt="Es wird dargestellt, wie man vorhandenene Spring Boot Starter Komponenten einbinden kann, um einen 
 eigenen Integratiosnartefakt zu erstellen." contain 
 max-width="960" 
-src="images/resources/documentation/architecture/integration/digiwf_how_to_build_a_integration_artifact.png" 
-lazy-src="images/resources/documentation/architecture/integration/preview_digiwf_how_to_build_a_integration_artifact.png" ></v-img>
+src="images/resources/documentation/concept/integration/digiwf_how_to_build_a_integration_artifact.png" 
+lazy-src="images/resources/documentation/concept/integration/preview_digiwf_how_to_build_a_integration_artifact.png" ></v-img>
 <figcaption>Beispielhafte Nutzung von Spring Boot Startern um einen eigenen Integrationsartefakt zu 
 erstellen</figcaption>
 </figure>
