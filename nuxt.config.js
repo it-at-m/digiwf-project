@@ -48,8 +48,38 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/i18n'
   ],
+
+  // i18n configuration
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-GB', file: 'en.json', name: 'English' },
+      { code: 'de', iso: 'de-DE', file: 'de.json', name: 'Deutsch' }
+    ],
+    defaultLocale: 'en',
+    langDir: 'locales',
+    vueI18n: {
+      fallbackLocale: 'en',
+      dateTimeFormats: {
+        en: {
+          short: {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric'
+          }
+        },
+        de: {
+          short: {
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric'
+          }
+        }
+      }
+    }
+  },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},

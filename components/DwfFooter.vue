@@ -6,30 +6,30 @@
         <v-col cols="0" sm="0" md="0" lg="2" xl="2" />
         <v-col cols="12" sm="3" md="3" lg="2" xl="2">
           <v-row class="font-weight-medium mt-10">
-            About
+            {{ $t('footer.about.title') }}
           </v-row>
 <!--          <v-row class="text-body-2 mt-6">-->
 <!--            Open Source Software-->
 <!--          </v-row>-->
           <v-row class="text-body-2 mt-6">
-            <NuxtLink class="text-decoration-none white--text" to="/about/rules">
-              Code of Conduct
+            <NuxtLink class="text-decoration-none white--text" :to="localePath('/about/rules')">
+              {{ $t('footer.about.coc') }}
             </NuxtLink>
           </v-row>
           <v-row class="text-body-2 mt-6">
-            <NuxtLink class="text-decoration-none white--text" to="/about/contact">
-              Contact us
+            <NuxtLink class="text-decoration-none white--text" :to="localePath('/about/contact')">
+              {{ $t('footer.about.contact') }}
             </NuxtLink>
           </v-row>
           <v-row class="text-body-2 mt-6">
-            <NuxtLink class="text-decoration-none white--text" to="/about/impress">
-              Impress
+            <NuxtLink class="text-decoration-none white--text" :to="localePath('/about/impress')">
+              {{ $t('footer.about.impress') }}
             </NuxtLink>
           </v-row>
         </v-col>
         <v-col cols="12" sm="3" md="3" lg="2" xl="2">
           <v-row class="font-weight-medium mt-10">
-            Ecosystem
+            {{ $t('footer.ecosystem.title') }}
           </v-row>
 <!--          <v-row class="text-body-2 mt-6">-->
 <!--            Announcements-->
@@ -46,11 +46,11 @@
         </v-col>
         <v-col cols="12" sm="3" md="3" lg="2" xl="2">
           <v-row class="font-weight-medium mt-10">
-            Resources
+            {{ $t('footer.resources.title') }}
           </v-row>
           <v-row class="text-body-2 mt-6">
-            <NuxtLink class="text-decoration-none white--text" to="/resources/documentation/architecture/overview">
-              Architecture
+            <NuxtLink class="text-decoration-none white--text" :to="localePath('/resources/documentation/concept/overview')">
+              {{ $t('footer.resources.architecture') }}
             </NuxtLink>
           </v-row>
 <!--          <v-row class="text-body-2 mt-6">-->
@@ -71,10 +71,10 @@
         </v-col>
         <v-col cols="12" sm="3" md="3" lg="2" xl="2">
           <v-row class="font-weight-medium mt-10">
-            Stay tuned!
+            {{ $t('footer.social.title') }}
           </v-row>
           <v-row class="text-body-2 mt-6">
-            Star us on github, follow on twitter or chat on slack.
+            {{ $t('footer.social.text') }}
           </v-row>
           <v-row class="text-body-2 ">
             <dwf-github-button />

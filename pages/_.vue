@@ -11,12 +11,42 @@
         <h1 class="mb-6 mt-6 text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4">
           {{ article.title }}
         </h1>
-        <nuxt-content :document="article"></nuxt-content>
+        <p class="text-caption">
+          {{ $t('documentation.lastchange') }}: {{ $d(new Date(article.createdAt), 'short') }}
+        </p>
+        <nuxt-content :document="article" tag="article"></nuxt-content>
+        <v-row>
+          <v-btn v-if="prev"
+                 small
+                 text
+                 nuxt
+                 :to="prev.path"
+                 :aria-label="`${$t('documentation.prev')}: ${prev.title}`"
+                 class="my-5">
+            <v-icon>
+              mdi-arrow-left
+            </v-icon>
+            {{ prev.title }}
+          </v-btn>
+          <v-spacer />
+          <v-btn v-if="next"
+                 small
+                 text
+                 nuxt
+                 :to="next.path"
+                 :aria-label="`${$t('documentation.next')}: ${next.title}`"
+                 class="my-5">
+            {{ next.title }}
+            <v-icon>
+              mdi-arrow-right
+            </v-icon>
+          </v-btn>
+        </v-row>
       </v-col>
       <!-- If the user uses a mobile device, don't display this column. -->
       <v-col cols="2" v-if="!mobile">
         <div class="subtitle-1 grey--text text--darken-1 mt-6 mb-4">
-          Table of contents
+          {{ $t('documentation.toc') }}
         </div>
         <v-list dense>
           <v-list-item v-for="link in article.toc" :key="link.id" nuxt :to="`#${link.id}`">
@@ -41,12 +71,19 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     VImg
   },
-  async asyncData ({ $content, params, error }) {
+  async asyncData ({ $content, params, error, app }) {
+    // Get correct locale, delete first '/' and add a '/' to the end.
+    // So we can get a localized source string for default (/) and all other
+    let locale = app.localePath('/') + '/'
+    // eslint-disable-next-line
+    locale = locale.replace('\//', '/')
     // get url params
-    const path = `/${params.pathMatch || 'index'}`
+    const path = `${locale}${params.pathMatch || 'index'}`
     // load the requested *.md file
     const [article] = await $content({ deep: true }).where({ path }).fetch()
     let navigation = []
+    let prev = null
+    let next = null
 
     if (!article) {
       // nothing found? nirwana!
@@ -54,9 +91,24 @@ export default {
     } else {
       // load all articles in the requested folder
       navigation = await $content(article.dir).only(['title', 'path', 'category', 'categoryIcon', 'navIcon']).sortBy('position').fetch()
+
+      // load prev and next
+      const [p, n] = await $content(article.dir)
+        .only(['title', 'path'])
+        .sortBy('position')
+        .surround(article.path)
+        .fetch()
+
+      if (p) {
+        prev = p
+      }
+
+      if (n) {
+        next = n
+      }
     }
     return {
-      article, navigation
+      article, navigation, prev, next
     }
   },
   computed: {

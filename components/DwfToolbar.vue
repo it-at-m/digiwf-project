@@ -10,16 +10,21 @@
     <dwf-github-button />
     <dwf-twitter-button />
     <dwf-slack-button />
+    <v-divider vertical light />
+    <dwf-language-switcher />
   </v-app-bar>
 </template>
 <script>
+import DwfLanguageSwitcher from './DwfLanguageSwitcher'
 export default {
+  components: { DwfLanguageSwitcher },
   methods: {
     /**
      * Sends the user back to the landing page
      */
     goHome () {
-      this.$router.push('/')
+      const path = this.localePath('/')
+      this.$router.push(path)
     }
   }
 }

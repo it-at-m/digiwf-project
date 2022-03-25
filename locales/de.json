@@ -1,0 +1,46 @@
+{
+  "index": {
+    "foo": "This is a test"
+  },
+  "documentation": {
+    "lastchange": "Letzte Änderung",
+    "toc": "Inhaltsverzeichnis",
+    "prev": "vorherige Seite",
+    "next": "nächste Seite"
+  },
+  "footer": {
+    "about": {
+      "title": "Das Projekt",
+      "coc": "Code of Conduct",
+      "contact": "Kontakt",
+      "impress": "Impressum"
+    },
+    "ecosystem": {
+      "title": "Öko-System"
+    },
+    "resources": {
+      "title": "Quellen",
+      "architecture": "Konzeption"
+    },
+    "social": {
+      "title": "Stay tuned!",
+      "text": "Folge uns auf github, twitter oder slack."
+    }
+  },
+  "toolbar": {
+    "language": {
+      "aria": "Hier kann die Sprache umgestellt werden."
+    }
+  },
+  "social": {
+    "github": {
+      "aria": "Öffnet den Github Projekt Space in einem eigenen Browser Tab."
+    },
+    "twitter": {
+      "aria": "Öffnet den DigiWF Twitter Account in einem eigenen Browser Tab."
+    },
+    "slack": {
+      "aria": "Öffnet Slack, oder die Registrierungsseite von Slack in einem eigenen Browser Tab."
+    }
+  }
+}

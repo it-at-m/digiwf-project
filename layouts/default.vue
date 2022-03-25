@@ -21,6 +21,7 @@
   font-size: smaller;
   color: #616161;
   margin-bottom: 2em;
+  text-align: center;
 }
 
 .nuxt-content p {
