@@ -12,17 +12,17 @@
 <!--            Open Source Software-->
 <!--          </v-row>-->
           <v-row class="text-body-2 mt-6">
-            <NuxtLink class="text-decoration-none white--text" to="/about/rules">
+            <NuxtLink class="text-decoration-none white--text" :to="localePath('/about/rules')">
               {{ $t('footer.about.coc') }}
             </NuxtLink>
           </v-row>
           <v-row class="text-body-2 mt-6">
-            <NuxtLink class="text-decoration-none white--text" to="/about/contact">
+            <NuxtLink class="text-decoration-none white--text" :to="localePath('/about/contact')">
               {{ $t('footer.about.contact') }}
             </NuxtLink>
           </v-row>
           <v-row class="text-body-2 mt-6">
-            <NuxtLink class="text-decoration-none white--text" to="/about/impress">
+            <NuxtLink class="text-decoration-none white--text" :to="localePath('/about/impress')">
               {{ $t('footer.about.impress') }}
             </NuxtLink>
           </v-row>
