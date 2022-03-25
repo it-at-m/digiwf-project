@@ -10,6 +10,13 @@
  * Released under the MIT License.
  */
 
+/*!
+ * cookie
+ * Copyright(c) 2012-2014 Roman Shtylman
+ * Copyright(c) 2015 Douglas Christopher Wilson
+ * MIT Licensed
+ */
+
 
 /*!
  * vue-client-only v0.0.0-semantic-release
