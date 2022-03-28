@@ -87,13 +87,50 @@ In der Abbildung oben ist zu sehen, wie mit ausgehenden Dateien umgegangen wird.
 Es ist übrigends davon abzuraten, eine presigned URL direkt heraus zu geben (beispielsweise per Mail zu 
 verschicken). Wie oben beschrieben ist eine solche URL nur eine bestimmte Zeit gültig. D.h. wenn dieser Zeitraum 
 abgelaufen ist, dann kann über die URL nicht mehr auf die Datei zugegriffen werden. Wenn dann auch noch die 
-Prozessinstanz beendet wurde, hat man auch nicht mehr so einfach zugriff auf die Referenz ID.
+Prozessinstanz beendet wurde, hat man auch nicht mehr so einfach Zugriff auf die Referenz ID.
 </v-alert>
 
 </section>
 <section>
 
 ## Datei Handling im GUI Integration Layer
+Dateien kommen natürlich nicht nur aus angebundenen Verfahren, sondern können auch über die grafische 
+Benutzeroberfläche ins System gelangen. Auch hier wird das Filehandling über den S3 Service abgewickelt.
+
+<figure>
+<v-img alt="Es wird gezeigt, wie das Speichern von Dateien aus dem Frontend heraus funktioniert." contain 
+max-width="960" 
+src="images/resources/documentation/concept/filehandling/digiwf_frontend_save_file.png" 
+lazy-src="images/resources/documentation/concept/filehandling/preview_digiwf_frontend_save_file.png" ></v-img>
+<figcaption>Datei(en) aus dem Frontend heraus speichern.</figcaption>
+</figure>
+
+Hier wird beschrieben, wie aus der Formularkomponente `File Upload Control` heraus eine Datei gespeichert wird. Der 
+Weg ist aber prinzipiell auch für eigene Formulare oder andere Oberflächen nutzbar.
+
+1. Es wird eine `presigned URL` am `S3 Service` angefragt. Dazu werden folgende Parameter übergeben:
+   - `refID` Die Referenz, unter der die Datei später abgerufen werden kann
+   - `filename` Der Name der Datei, die gespeichert werden soll.
+   - `endOfLife` Es kann ein Löschdatum mitgegeben werden. Zu diesem Zeitpunkt wird die Datei dann automatisch aus 
+     dem S3 Speicher gelöscht. Das ist vor allem dann sinnvoll, wenn Daten nur eine bestimmte Zeit aufbewahrt werden 
+     dürfen.
+   - `expiredInMinutes` Die Zeitspanne in Minuten, für die der Link gültig ist. Nach ablauf dieser Zeit kann er 
+     nicht mehr verwendet werden.
+2. Der `S3 Service` erzeugt über den S3 Storage eine entsprechende `presigned URL`. Was dort genau passiert, ist im 
+   Sequenzdiagramm unten ersichtlich. Diese URL wird an das `File Upload Control`zurückgegeben.
+3. Über die `presigned URL` kann nun die Oberflächenkomponente die Datei direkt an den S3 Storage übergeben.
+
+Wenn man mehr als eine Datei speichern will, so muss dieser Vorgang natürlich entsprechend oft wiederholt werden.
+
+<figure>
+<v-img alt="Es wird gezeigt, wie das Speichern von Dateien aus dem Frontend heraus funktioniert (Sequenzdiagramm)." 
+contain 
+max-width="870" 
+src="images/resources/documentation/concept/filehandling/digiwf_file_handling_frontend_sequence_diagram.png" 
+lazy-src="images/resources/documentation/concept/filehandling/preview_digiwf_file_handling_frontend_sequence_diagram.
+png" ></v-img>
+<figcaption>Datei(en) aus dem Frontend heraus speichern - detaillierte Ansicht.</figcaption>
+</figure>
 
 </section>
 <section>
