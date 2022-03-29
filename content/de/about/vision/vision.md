@@ -12,3 +12,4 @@ src="images/about/vision/digiwf_vision.png"
 lazy-src="images/about/vision/preview_digiwf_vision.png" ></v-img>
 <figcaption>Die DigiWF Vision</figcaption>
 </figure>
+
