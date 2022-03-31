@@ -27,8 +27,12 @@ Hier kann eine Cloudlösung wie AWS oder ein on prem Dienst verwendet werden. Di
 sich wird über eine generisch gültige Schnittstelle abstrahiert.
 
 Grundsätzlich ist es möglich (und bei mehrfacher Nutzung der Plattform empfehlenswert), mehr als einen `S3 Bucket` 
-als Dateispeicher bereitzustellen. Je nach Fachlichkeit kann hier nach Domäne, Prozess oder Abteilung ein eigener `S3 
-Bucket` mit einem eigenen `S3 Service` an die Plattform angebunden werden.
+als Dateispeicher bereitzustellen. Allerdings nicht im selben `S3 Service` - hier gibt es eine 1:1 Beziehung zwischen 
+Service und `S3 Bucket`. Trotzdem kann - je nach 
+Fachlichkeit - hier nach Domäne, Prozess oder 
+Abteilung ein eigener `S3 
+Bucket` mit einem eigenen `S3 Service` an die Plattform angebunden werden. Das heißt bei einer größeren Installation 
+(beispielsweise Unternehmensweit) wird man in der Regel n `S3 Services` angebunden haben.
 
 </section>
 <section>
@@ -95,7 +99,9 @@ Prozessinstanz beendet wurde, hat man auch nicht mehr so einfach Zugriff auf die
 
 ## Datei Handling im GUI Integration Layer
 Dateien kommen natürlich nicht nur aus angebundenen Verfahren, sondern können auch über die grafische 
-Benutzeroberfläche ins System gelangen. Auch hier wird das Filehandling über den S3 Service abgewickelt.
+Benutzeroberfläche ins System gelangen. Auch hier wird das Filehandling über den S3 Service abgewickelt. Wichtig ist 
+hierbei, dass die Kommunikation nicht - wie bei den Integrationsartefakten - über den `Event Bus` erfolgt, sondern 
+per `REST` Aufruf, da die Oberflächenkomponenten keinen direkten Zugang zum `Event Bus` haben.
 
 <figure>
 <v-img alt="Es wird gezeigt, wie das Speichern von Dateien aus dem Frontend heraus funktioniert." contain 
