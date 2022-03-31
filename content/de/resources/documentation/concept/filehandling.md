@@ -79,9 +79,10 @@ lazy-src="images/resources/documentation/concept/filehandling/preview_digiwf_out
 
 In der Abbildung oben ist zu sehen, wie mit ausgehenden Dateien umgegangen wird.
 
-1. Grundvoraussetzung um eine Datei aus dem `S3 Bucket` zu holen ist die Referenz- oder Datei ID. Will man mehrere 
-   Dateien laden - und beispielsweise an eine E-Mail anhängen - so werden auch entsprechend viele Referenz IDs 
-   benötigt. D.h. die Kardinalität zwischen Datei und Referenz ID ist immer 1:1.
+1. Grundvoraussetzung um eine Datei (oder einen ganzen Ordner) aus dem `S3 Bucket` zu holen ist die Referenz- oder 
+   Datei ID. Will man mehrere 
+   Dateien / Ordner laden - und beispielsweise an eine E-Mail anhängen - so werden auch entsprechend viele Referenz IDs 
+   benötigt. D.h. die Kardinalität zwischen Datei / Ordner und Referenz ID ist immer 1:1.
 2. Mit der Referenz ID kann am `S3 Service` eine `presigned URL` für die Operation `GET` erfragt werden. Auch hier 
    gilt - für jede Datei wird eine eigene `presigned URL` benötigt.
 3. Mit der `presigned URL` kann wiederum die Datei direkt aus dem `S3 Bucket` geladen werden.
