@@ -128,15 +128,21 @@ Weg ist aber prinzipiell auch für eigene Formulare oder andere Oberflächen nut
 3. Über die `presigned URL` kann nun die Oberflächenkomponente die Datei direkt an den S3 Storage übergeben.
 
 Wenn man mehr als eine Datei speichern will, so muss dieser Vorgang natürlich entsprechend oft wiederholt werden.
+<figure>
+<v-img alt="Es wird gezeigt, wie das Speichern von Dateien aus dem Frontend heraus funktioniert." contain 
+max-width="960" 
+src="images/resources/documentation/concept/filehandling/digiwf_save_file_sequence_diagram.png" 
+lazy-src="images/resources/documentation/concept/filehandling/preview_digiwf_save_file_sequence_diagram.png" ></v-img>
+<figcaption>Datei(en) aus dem Frontend heraus speichern - detaillierte Ansicht.</figcaption>
+</figure>
 
 <figure>
 <v-img alt="Es wird gezeigt, wie das Speichern von Dateien aus dem Frontend heraus funktioniert (Sequenzdiagramm)." 
 contain 
-max-width="870" 
-src="images/resources/documentation/concept/filehandling/digiwf_file_handling_frontend_sequence_diagram.png" 
-lazy-src="images/resources/documentation/concept/filehandling/preview_digiwf_file_handling_frontend_sequence_diagram.
-png" ></v-img>
-<figcaption>Datei(en) aus dem Frontend heraus speichern - detaillierte Ansicht.</figcaption>
+max-width="926" 
+src="images/resources/documentation/concept/filehandling/digiwf_load_file_sequence_diagram.png" 
+lazy-src="images/resources/documentation/concept/filehandling/preview_digiwf_load_file_sequence_diagram.png" ></v-img>
+<figcaption>Datei(en) aus dem Frontend heraus laden - detaillierte Ansicht.</figcaption>
 </figure>
 
 </section>
