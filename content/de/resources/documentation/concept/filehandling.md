@@ -128,6 +128,12 @@ Weg ist aber prinzipiell auch für eigene Formulare oder andere Oberflächen nut
 3. Über die `presigned URL` kann nun die Oberflächenkomponente die Datei direkt an den S3 Storage übergeben.
 
 Wenn man mehr als eine Datei speichern will, so muss dieser Vorgang natürlich entsprechend oft wiederholt werden.
+
+### Authorization beim Umgang mit Dateien aus dem Frontend
+
+Während in der Integrationsschicht relativ klar ist, wer auf welche Datei zugreifen kann, ist dies im Frontend 
+deutlich schwieriger zu entscheiden, da hier potenziell erst einmal jeder auf die Schnittstelle zugreifen kann. 
+
 <figure>
 <v-img alt="Es wird gezeigt, wie das Speichern von Dateien aus dem Frontend heraus funktioniert." contain 
 max-width="960" 
