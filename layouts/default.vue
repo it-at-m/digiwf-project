@@ -21,7 +21,7 @@
   font-size: smaller;
   color: #616161;
   margin-bottom: 2em;
-  text-align: center;
+  text-align: left;
 }
 
 .nuxt-content p {
