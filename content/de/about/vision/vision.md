@@ -13,3 +13,14 @@ lazy-src="images/about/vision/preview_digiwf_vision.png" ></v-img>
 <figcaption>Die DigiWF Vision</figcaption>
 </figure>
 
+In einem agilen Umfeld wollen wir, dass eine Auswahl an Mustern und Technologien - auch Bausteinen - 
+zur Verfügung gestellt wird, mit deren Hilfe Entwickler in der Lage sind genau die Low Code Funktionalitäten zu 
+entwickeln, die in dem Moment in der Organisation gebraucht werden. Das ist das Ziel von DigiWF. Wir 
+stellen nicht eine riesige Auswahl an Features zur Verfügung (und lassen sie uns bezahlen), von denen nur 10% 
+genutzt werden, sondern befähigen eine Entwicklungsorganisation sich selbst eine maßgeschneiderte Lösung (die 
+wiederverwendbar sind) rund um 
+BPMN und DMN zu bauen.
+
+So kann mit der Plattform klein gestartet und bei Bedarf (stark) gewachsen werden. 
+
+
