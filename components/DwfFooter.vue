@@ -17,6 +17,11 @@
             </NuxtLink>
           </v-row>
           <v-row class="text-body-2 mt-6">
+            <NuxtLink class="text-decoration-none white--text" :to="localePath('/about/roadmap')">
+              {{ $t('footer.about.roadmap') }}
+            </NuxtLink>
+          </v-row>
+          <v-row class="text-body-2 mt-6">
             <NuxtLink class="text-decoration-none white--text" :to="localePath('/about/rules')">
               {{ $t('footer.about.coc') }}
             </NuxtLink>
