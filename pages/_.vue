@@ -62,7 +62,7 @@
   </v-container>
 </template>
 <script>
-import { VAlert, VImg } from 'vuetify/lib'
+import { VAlert, VImg, VSpacer } from 'vuetify/lib'
 import DwfIntegrationArtifact from "../components/DwfIntegrationArtifact";
 
 export default {
@@ -71,6 +71,8 @@ export default {
     VAlert,
     // eslint-disable-next-line vue/no-unused-components
     VImg,
+    // eslint-disable-next-line vue/no-unused-components
+    VSpacer,
     // eslint-disable-next-line vue/no-unused-components
     DwfIntegrationArtifact
   },
