@@ -63,13 +63,16 @@
 </template>
 <script>
 import { VAlert, VImg } from 'vuetify/lib'
+import DwfIntegrationArtifact from "../components/DwfIntegrationArtifact";
 
 export default {
   components: {
     // eslint-disable-next-line vue/no-unused-components
     VAlert,
     // eslint-disable-next-line vue/no-unused-components
-    VImg
+    VImg,
+    // eslint-disable-next-line vue/no-unused-components
+    DwfIntegrationArtifact
   },
   async asyncData ({ $content, params, error, app }) {
     // Get correct locale, delete first '/' and add a '/' to the end.

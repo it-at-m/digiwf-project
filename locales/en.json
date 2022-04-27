@@ -8,6 +8,12 @@
     "prev": "previous page",
     "next": "next page"
   },
+  "integrationartifact": {
+    "name": "Integration Artifact",
+    "description": "Description",
+    "github": "Github",
+    "documentation": "Docs"
+  },
   "footer": {
     "about": {
       "vision": "Vision Statement",

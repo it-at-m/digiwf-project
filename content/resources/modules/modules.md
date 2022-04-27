@@ -5,3 +5,7 @@ category: 'Integration Artifacts'
 categoryIcon: 'mdi-toy-brick'
 position: 1
 ---
+
+<dwf-integration-artifact name="S3-Integration" description="Artifact to integrate a S3 
+File Service." github="https://github.com/it-at-m/digiwf-s3-integration" 
+docs="/resources/modules/s3integration"></dwf-integration-artifact>
