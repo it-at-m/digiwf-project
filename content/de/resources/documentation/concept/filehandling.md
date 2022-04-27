@@ -14,7 +14,7 @@ File Handling findet in den Integrations Layern (entweder GUI oder Backend statt
 
 <figure>
 <v-img alt="Es sind die drei Schichten GUI Integration, DigiWF Core und Application Integration Layer dargestellt. 
-Dort ist eingezeichnet, dass nur in den beiden integrationsschichten File Handling statt findet." contain 
+Dort ist eingezeichnet, dass nur in den beiden Integrationsschichten File Handling stattfindet." contain 
 max-width="960" 
 src="images/resources/documentation/concept/filehandling/digiwf_file_handling_in_integration_layers.png" 
 lazy-src="images/resources/documentation/concept/filehandling/preview_digiwf_file_handling_in_integration_layers.png" ></v-img>
