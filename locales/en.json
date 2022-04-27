@@ -22,7 +22,8 @@
     },
     "resources": {
       "title": "Resources",
-      "architecture": "Concept"
+      "architecture": "Concept",
+      "modules": "Integration Artifacts"
     },
     "social": {
       "title": "Stay tuned!",
