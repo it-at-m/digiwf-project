@@ -1,23 +1,26 @@
 <template>
-  <div v-html="htmlcontent"></div>
+  <div v-html="htmlcontent" />
 </template>
 
 <script>
 import { marked } from 'marked'
 
 export default {
-  name: "DwfMarkdownLoader",
+  name: 'DwfMarkdownLoader',
   props: {
-    source: String
+    source: {
+      default: '',
+      type: String
+    }
   },
   data: () => ({
     markdown: ''
   }),
-  async fetch() {
+  async fetch () {
     this.markdown = await this.$http.$get(this.source)
   },
   computed: {
-    htmlcontent() {
+    htmlcontent () {
       return marked.parse(this.markdown)
     }
   }

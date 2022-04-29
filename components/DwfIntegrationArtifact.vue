@@ -44,12 +44,24 @@
 
 <script>
 export default {
-  name: "DwfIntegrationArtifact.vue",
+  name: 'DwfIntegrationArtifact.vue',
   props: {
-    name: String,
-    description: String,
-    github: String,
-    docs: String
+    name: {
+      default: 'name',
+      type: String
+    },
+    description: {
+      default: 'description',
+      type: String
+    },
+    github: {
+      default: 'github url',
+      type: String
+    },
+    docs: {
+      default: 'docs url',
+      type: String
+    }
   }
 }
 </script>
