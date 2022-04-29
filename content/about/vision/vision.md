@@ -13,7 +13,4 @@ lazy-src="images/about/vision/preview_digiwf_vision.png" ></v-img>
 <figcaption>The DigiWF Vision</figcaption>
 </figure>
 
-In an agile environment, we want a selection of patterns and technologies - including building blocks - to be made available to developers.
-that enable developers to build exactly the low-code functionality that is needed at that moment in the organization. That is the goal of DigiWF. We don't provide a huge set of features (and get paid for them), of which only 10% are used, but enable a development organization to develop the low code functionalities that are needed at that moment.
-
-This allows the platform to start small and grow (strongly) as needed.
+In an agile environment, we want a selection of patterns and technologies - including building blocks - to be provided that enable developers to build exactly the low-code functionality that is needed in the organization at that moment. That is the goal of DigiWF. We do not provide a proprietary out-of-box solution that is customized, but enable a development organization to build itself a customized solution. In doing so, we rely on reusable low-code functionalities that we make usable via BPMN and DMN. Thus, the platform can be started small and scaled quickly if required.
