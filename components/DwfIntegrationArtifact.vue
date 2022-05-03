@@ -1,15 +1,18 @@
 <template>
   <v-card
       class="ma-3 align-start"
-      max-width="350"
-      max-height="350"
+      width="320"
+      height="200"
   >
+    <v-card-title>
+      <v-icon large>
+        {{ icon }}
+      </v-icon>
+    </v-card-title>
     <v-card-text>
-      <div>{{ $t('integrationartifact.name') }}</div>
       <div class="text-h4 text--primary">
         {{ name }}
       </div>
-      <p>{{ $t('integrationartifact.description') }}</p>
       <div class="text--primary">
         {{ description }}
       </div>
@@ -60,6 +63,10 @@ export default {
     },
     docs: {
       default: 'docs url',
+      type: String
+    },
+    icon: {
+      default: 'mdi-toy-brick-outline',
       type: String
     }
   }
