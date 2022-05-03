@@ -14,16 +14,16 @@
     "@nuxt/content": "^1.15.1",
     "@nuxt/http": "^0.6.4",
     "@nuxtjs/i18n": "^7.2.2",
-    "core-js": "^3.22.2",
+    "core-js": "^3.22.4",
     "marked": "^4.0.14",
     "nuxt": "^2.15.8",
-    "vuetify": "^2.6.4"
+    "vuetify": "^2.6.5"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.14.7",
     "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.1.0",
-    "@nuxtjs/eslint-config-typescript": "^9.0.0",
+    "@nuxtjs/eslint-config-typescript": "^10.0.0",
     "@nuxtjs/eslint-module": "^3.1.0",
     "@nuxtjs/vuetify": "^1.12.3",
     "eslint": "^8.14.0",
