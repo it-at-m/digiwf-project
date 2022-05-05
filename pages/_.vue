@@ -7,7 +7,7 @@
       <v-col cols="2" v-if="!mobile">
         <dwf-navigation-drawer :navigation="navigation" />
       </v-col>
-      <v-col cols="12" sm="12" md="12" lg="8" xl="8">
+      <v-col cols="12" sm="12" md="12" lg="7" xl="5">
         <h1 class="mb-6 mt-6 text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4">
           {{ article.title }}
         </h1>

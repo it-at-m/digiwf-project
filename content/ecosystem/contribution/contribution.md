@@ -30,3 +30,7 @@ The documentation of (official) integration artifacts should be done in the resp
 5. for the integration artifact an entry is created on the page `[language]/resources/modules/modules.md` (again please for all translations).
 6. in the folder `docs` should be (at least) the following contents: quickstart, architecture overview (if possible with picture), all
    operations (element templates) in separate files. Please document especially the input and output parameters of the element templates.
+
+<v-alert color="red darken-1" border="left" elevation="2" colored-border icon="mdi-robot-angry">
+It is important to rebuild and deploy the central documentation page when making changes to the documentation in the repo. Since it is a static page, it does not get anything from changes in another repo / on another server.
+</v-alert>

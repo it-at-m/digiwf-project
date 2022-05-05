@@ -39,3 +39,8 @@ Regeln:
    Operationen (Element Templates) in eigenen Dateien. Bitte vor allem die Input und Output Parameter der Element 
    Templates dokumentieren.
 
+<v-alert color="red darken-1" border="left" elevation="2" colored-border icon="mdi-robot-angry" class="pb-4">
+Es ist wichtig bei Änderungen der Dokumentation im Repo die zentrale Dokumentationsseite nochmal zu bauen und 
+auszubringen. Da es sich um eine statische Seite handelt, bekommt die nichts von Änderungen in einem anderen Repo / 
+auf einem anderen Server mit.
+</v-alert>
