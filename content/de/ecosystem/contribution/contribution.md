@@ -21,7 +21,7 @@ Bindet man Markdown Dokumente aus github ein, so bietet es sich an, hier die "ra
 
 ### Dokumentation von Integrationsartefakten
 
-Die Dokumentations von (offiziellen) Integrations Artefakten soll einerseits in dem jeweiligen Repository erfolgen. 
+Die Dokumentation von (offiziellen) Integrations Artefakten soll einerseits in dem jeweiligen Repository erfolgen. 
 Andererseits hier in der offiziellen Gesamtdokumentation. Um nicht doppelt Inhalte pflegen zu müssen gelten folgende 
 Regeln:
 
@@ -30,7 +30,7 @@ Regeln:
 2. Die Dokumentation liegt im jeweiligen Repo im Ordner `docs`.
 3. Die Abschnitte der Dokumentation wird in einzelne Abschnitte aufgeteilt. Diese werden dann in das `readme.md` im 
    Repo, als auch in die zentrale Dokumentation eingebunden.
-4. Für jede Spreche muss unter `[Sprache]/resources/modules` eine Seite erstellt werden. Die Markdown Dateien aus 
+4. Für jede Sprache muss unter `[Sprache]/resources/modules` eine Seite erstellt werden. Die Markdown Dateien aus 
    den Repos werden über die Komponente `DwfMarkdownLoader` eingebunden.
 5. Für den integrationsartefakt wird ein Eintrag auf der Seite `[Sprache]/resources/modules/modules.md` erstellt 
    (auch hier bitte für alle Übersetzungen).
