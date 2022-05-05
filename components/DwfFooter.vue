@@ -44,9 +44,11 @@
 <!--          <v-row class="text-body-2 mt-6">-->
 <!--            Announcements-->
 <!--          </v-row>-->
-<!--          <v-row class="text-body-2 mt-6">-->
-<!--            Contribute-->
-<!--          </v-row>-->
+          <v-row class="text-body-2 mt-6">
+            <NuxtLink class="text-decoration-none white--text" :to="localePath('/ecosystem/contribution/contribution')">
+              {{ $t('footer.ecosystem.contribution') }}
+            </NuxtLink>
+          </v-row>
 <!--          <v-row class="text-body-2 mt-6">-->
 <!--            Team-->
 <!--          </v-row>-->

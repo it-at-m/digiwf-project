@@ -2,7 +2,7 @@
 title: Integration Artifacts Overview
 description: An overview of the DigiWF Integration Artifacts
 category: 'Integration Artifacts'
-categoryIcon: 'mdi-toy-brick'
+categoryIcon: 'mdi-toy-brick-outline'
 position: 1
 ---
 <div class="d-flex flex-wrap float-left">

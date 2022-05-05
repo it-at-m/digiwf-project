@@ -24,7 +24,8 @@
       "impress": "Impress"
     },
     "ecosystem": {
-      "title": "Ecosystem"
+      "title": "Ecosystem",
+      "contribution": "Contributions"
     },
     "resources": {
       "title": "Resources",
