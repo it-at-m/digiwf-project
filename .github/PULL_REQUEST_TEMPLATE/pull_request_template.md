@@ -15,8 +15,8 @@ Issues #XXX
 
 - [ ] Acceptance criteria are met
 - [ ] Pipeline has been run successfully
-- [ ] JUnit tests have been run successfully
-- [ ] Changelog is adjusted
+- [ ] JUnit tests are written and ran successfully
+- [ ] Changelog is maintained
 - [ ] [Documentations](https://git.muenchen.de/groups/digitalisierung/-/wikis/Dokumentationen) are completed
 - [ ] Frontend is tested
 - [ ] Created sub-branches are deleted
