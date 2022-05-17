@@ -26,7 +26,7 @@
           Constraints
         </v-col>
       </v-row>
-      <v-row v-for="property in elementtemplate.properties">
+      <v-row v-for="property in elementtemplate.properties" v-bind:key="property.label">
         <v-col>
           {{ property.label }}
         </v-col>
