@@ -7,8 +7,7 @@ position: 2
 ---
 
 A basic functionality of DigiWF is to connect the processes with the backend infrastructure. Here it is
-secondary where the applications are located that are to be used in a workflow. They can be hosted on prem, as well as running in the cloud. The important thing is that they have an interface - or if they don't have an
-have one, the application can still be connected via a RPA service. 
+secondary where the applications are located that are to be used in a workflow. They can be hosted on prem, as well as running in the cloud. The important thing is that they have an interface - or if they don't have one, the application can still be connected via an RPA service. 
 
 ## The DigiWF integration architecture
 <figure>
