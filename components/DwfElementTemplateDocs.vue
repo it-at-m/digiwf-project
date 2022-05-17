@@ -28,7 +28,7 @@
 
 <script>
 export default {
-  name: "DwfElementTemplateDocs",
+  name: 'DwfElementTemplateDocs',
   props: {
     jsonurl: {
       default: 'json url',

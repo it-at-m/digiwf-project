@@ -65,7 +65,7 @@
 import { VAlert, VImg, VSpacer } from 'vuetify/lib'
 import DwfIntegrationArtifact from '../components/DwfIntegrationArtifact'
 import DwfMarkdownLoader from '../components/DwfMarkdownLoader'
-import DwfElementTemplateDocs from "../components/DwfElementTemplateDocs";
+import DwfElementTemplateDocs from '../components/DwfElementTemplateDocs'
 
 export default {
   components: {
