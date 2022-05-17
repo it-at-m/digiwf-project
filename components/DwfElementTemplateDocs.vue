@@ -12,14 +12,36 @@
       {{ elementtemplate.id }}
     </v-card-subtitle>
     <v-card-text>
-      <v-row>
+      <v-row class="font-weight-medium">
         <v-col>
-          {{ elementtemplate.properties[0].label }}
+          Label
+        </v-col>
+        <v-col>
+          Type
+        </v-col>
+        <v-col>
+          Binding Type
+        </v-col>
+        <v-col>
+          Constraints
+        </v-col>
+      </v-row>
+      <v-row v-for="property in elementtemplate.properties">
+        <v-col>
+          {{ property.label }}
         </v-col>
         <v-col>
           <code>
-            {{ elementtemplate.properties[0].type }}
+            {{ property.type }}
           </code>
+        </v-col>
+        <v-col>
+          <code>
+            {{ property.binding.type }}
+          </code>
+        </v-col>
+        <v-col>
+          {{ property.constraints }}
         </v-col>
       </v-row>
     </v-card-text>
