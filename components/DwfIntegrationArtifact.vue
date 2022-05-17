@@ -2,7 +2,7 @@
   <v-card
       class="ma-3 align-start"
       width="320"
-      height="200"
+      height="230"
   >
     <v-card-title>
       <v-icon large>

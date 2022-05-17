@@ -5,32 +5,14 @@ category: 'Integration Artifacts'
 categoryIcon: 'mdi-toy-brick-outline'
 position: 1
 ---
+<v-row>
 <div class="d-flex flex-wrap float-left">
-<dwf-integration-artifact name="S3-Integration" description="Artifact to integrate a S3 
-File Service." github="https://github.com/it-at-m/digiwf-s3-integration" icon="mdi-aws"
-docs="/resources/modules/s3integration"></dwf-integration-artifact>
-<dwf-integration-artifact name="Mail-Integration" description="Artifact to integrate a S3 
-File Service." icon="mdi-postage-stamp" github="https://github.com/it-at-m/digiwf-s3-integration" 
-docs="/resources/modules/s3integration"></dwf-integration-artifact>
-<dwf-integration-artifact name="Cosys-Integration" icon="mdi-file-pdf-box" description="Artifact to integrate a S3 
-File Service." github="https://github.com/it-at-m/digiwf-s3-integration" 
-docs="/resources/modules/s3integration"></dwf-integration-artifact>
-<dwf-integration-artifact name="DMS-Integration" icon="mdi-database-outline" description="Artifact to integrate a S3 
-File Service." github="https://github.com/it-at-m/digiwf-s3-integration" 
-docs="/resources/modules/s3integration"></dwf-integration-artifact>
-<dwf-integration-artifact name="S3-Integration" description="Artifact to integrate a S3 
-File Service." github="https://github.com/it-at-m/digiwf-s3-integration" 
-docs="/resources/modules/s3integration"></dwf-integration-artifact>
-<dwf-integration-artifact name="S3-Integration" description="Artifact to integrate a S3 
-File Service." github="https://github.com/it-at-m/digiwf-s3-integration" 
-docs="/resources/modules/s3integration"></dwf-integration-artifact>
-<dwf-integration-artifact name="S3-Integration" description="Artifact to integrate a S3 
-File Service." github="https://github.com/it-at-m/digiwf-s3-integration" 
-docs="/resources/modules/s3integration"></dwf-integration-artifact>
-<dwf-integration-artifact name="S3-Integration" description="Artifact to integrate a S3 
-File Service." github="https://github.com/it-at-m/digiwf-s3-integration" 
-docs="/resources/modules/s3integration"></dwf-integration-artifact>
+<dwf-integration-artifact name="mail-Integration" description="Artifact to integrate an e-mail server, so you can 
+send mails from processes." 
+github="https://github.com/it-at-m/digiwf-email-integration" icon="mdi-email-fast"
+docs="/resources/modules/emailintegration"></dwf-integration-artifact>
 </div>
+</v-row>
 
 
 
