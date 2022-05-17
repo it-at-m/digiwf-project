@@ -65,6 +65,7 @@
 import { VAlert, VImg, VSpacer } from 'vuetify/lib'
 import DwfIntegrationArtifact from '../components/DwfIntegrationArtifact'
 import DwfMarkdownLoader from '../components/DwfMarkdownLoader'
+import DwfElementTemplateDocs from "../components/DwfElementTemplateDocs";
 
 export default {
   components: {
@@ -77,7 +78,9 @@ export default {
     // eslint-disable-next-line vue/no-unused-components
     DwfIntegrationArtifact,
     // eslint-disable-next-line vue/no-unused-components
-    DwfMarkdownLoader
+    DwfMarkdownLoader,
+    // eslint-disable-next-line vue/no-unused-components
+    DwfElementTemplateDocs
   },
   async asyncData ({ $content, params, error, app }) {
     // Get correct locale, delete first '/' and add a '/' to the end.
