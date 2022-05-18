@@ -51,7 +51,7 @@ If you want to load Markdown documents from github, it is recommended to use the
 
 #### DwfElementTemplateDocs
 
-Über die Komponente `DwfElementTemplateDocs` können Element Templates geladen werden, die auf einem anderen Server liegen. Das Template wird dann als Liste angezeigt, wobei jede Zeile einem Property entspricht.
+The component `DwfElementTemplateDocs` can be used to load and show ElementTemplates on other servers. The template will be shown as a list, with every line referring to a property inside the template.
 
 ``` html
 <dwf-element-template-docs jsonurl="https://raw.githubusercontent.com/it-at-m/digiwf-email-integration/dev/docs/sendMail.json"></dwf-element-template-docs>
