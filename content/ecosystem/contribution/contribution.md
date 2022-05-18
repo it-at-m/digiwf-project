@@ -10,7 +10,7 @@ position: 1
 
 ### Documentation of integration artifacts
 
-The documentation of (official) integration artifacts should be done in the respective repository. On the other hand here in the official overall documentation. In order not to have to maintain content twice, the following rules apply:
+The documentation of (official) integration artifacts should be done in the respective repository in github and in the official central documentation (here). In order to not have to maintain content twice, the following rules apply:
 
 1. documentation shall be in English only. Also in other translations (as for example German) the English documentation is integrated.
 2. the documentation is located in the respective repo in the folder 'docs'.
