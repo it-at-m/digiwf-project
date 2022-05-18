@@ -15,7 +15,8 @@ The documentation of (official) integration artifacts should be done in the resp
 1. Documentation shall be in English only. Also, for all translations (German for example) the English documentation is  to be integrated.
 2. The documentation is located in the respective repository in the folder 'docs'.
 3. The documentation should be split into single sections. These section should then be included in the `readme.md` inside the repository, as well as here in the central documentation.
-4. for each language a page must be created under `[language]/resources/modules`. The Markdown files from the repos are included via the component `DwfMarkdownLoader`.
+4. For each language, a file must be created under `[language]/resources/modules`. The Markdown files from the repos are included via the component `DwfMarkdownLoader`.
+ElementTemplates can be included via the component `DwfElementTemplateDocs`.
 5. for the integration artifact an entry is created on the page `[language]/resources/modules/modules.md` (again please for all translations).
 6. in the folder `docs` should be (at least) the following contents: quickstart, architecture overview (if possible with picture), all
    operations (element templates) in separate files. Please document especially the input and output parameters of the element templates.
