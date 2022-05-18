@@ -6,6 +6,11 @@ categoryIcon: 'mdi-floor-plan'
 position: 5
 ---
 
+The DigiWF applications communicate with an `Event Bus` to exchange events that occur within the DigiWF plattform.
+Internally the DigiWF application use spring cloud stream as an abstraction layer to interact with the `Event Bus`. Therefore, the `Event Bus` is interchangeable as long as a spring cloud stream exists.
+
+In this article we explain our topic naming conventions and list the currently existing topics. 
+
 ## Naming conventions for Event Bus Topics
 
 ```
@@ -16,7 +21,7 @@ Every DigiWF topic name consist of these 3 parts:
 
 - **prefix** is used to group the topics to a specific application. In the context of DigiWF this prefix is usually `dwf`.
 - **domain** Every DigiWF topic belongs to a specific domain. The name of the domain may be similar to the application name.
-- **usage-context** If a domain has more than 1 topic an additional usage context is added to the topics name. The usage-context is optional.
+- **usage-context** If a domain has more than 1 topic an additional `<usage context>` is added to the topics name. The `<usage context>` is optional.
 - **environment** is the suffix describing the environment the applications run in.
 
 Examples:
@@ -55,4 +60,6 @@ In this use case the header `type` with the value `deploy` is used in the deploy
 dwf-cocreation-deploy-<ENV>
 ```
 
-After every deployment the digiwf-engine sends a deployment status event to the `dwf-cocreation-deploy-<ENV>` topic. 
+After every deployment the digiwf-engine sends a deployment status event to the `dwf-cocreation-deploy-<ENV>` topic that informs subscribes of the topic about the success or failure of the deployment.
+
+
