@@ -13,7 +13,7 @@ position: 1
 The documentation of (official) integration artifacts should be done in the respective repository in github and in the official central documentation (here). In order to not have to maintain content twice, the following rules apply:
 
 1. documentation shall be in English only. Also in other translations (as for example German) the English documentation is integrated.
-2. the documentation is located in the respective repo in the folder 'docs'.
+2. The documentation is located in the respective repository in the folder 'docs'.
 3. the sections of the documentation will be splitted into single sections. These are then included in the `readme.md` in the repo, as well as in the central documentation.
 4. for each language a page must be created under `[language]/resources/modules`. The Markdown files from the repos are included via the component `DwfMarkdownLoader`.
 5. for the integration artifact an entry is created on the page `[language]/resources/modules/modules.md` (again please for all translations).
