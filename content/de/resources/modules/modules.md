@@ -1,5 +1,5 @@
 ---
-title: Integration Artifacts Übnersicht
+title: Integration Artifacts Übersicht
 description: Eine Übersicht über alle DigiWF Integrationsartefakte
 category: 'Integration Artifacts'
 categoryIcon: 'mdi-toy-brick'
