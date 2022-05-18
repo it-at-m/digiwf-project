@@ -19,17 +19,21 @@ Regeln:
 2. Die Dokumentation liegt im jeweiligen Repo im Ordner `docs`.
 3. Die Abschnitte der Dokumentation wird in einzelne Abschnitte aufgeteilt. Diese werden dann in das `readme.md` im 
    Repo, als auch in die zentrale Dokumentation eingebunden.
-4. Für jede Sprache muss unter `[Sprache]/resources/modules` eine Seite erstellt werden. Die Markdown Dateien aus 
-   den Repos werden über die Komponente `DwfMarkdownLoader` eingebunden.
+4. Für jede Sprache muss im Ordner `[Sprache]/resources/modules` eine Seite erstellt werden. Die Markdown Dateien aus 
+   den Repos werden über die Komponente `DwfMarkdownLoader` eingebunden. Element Templates können über 
+   `DwfElementTemplateDocs` dargestellt werden.
 5. Für den integrationsartefakt wird ein Eintrag auf der Seite `[Sprache]/resources/modules/modules.md` erstellt 
-   (auch hier bitte für alle Übersetzungen).
+   (auch hier bitte für alle Übersetzungen). Hierzu muss einer der vorhandenen `DIV` Elemente kopiert und entsprechend 
+   angepasst werden.
 6. Im Ordner `docs` sollten (mindestens) folgende Inhalte liegen: Quickstart, Architekturüberblick (möglichst mit 
    Bild), alle 
    Operationen (Element Templates) in eigenen Dateien. Bitte vor allem die Input und Output Parameter der Element 
-   Templates dokumentieren.
+   Templates dokumentieren (siehe hierfür auch `DwfElementTemplateDocs`).
 7. Bilder müssen mit absoluten Pfaden eingefügt werden, um sie auch hier korrekt anzeigen zu können. In github gibt 
    es dazu die Funktion "copy permalink" (siehe Screenshot unten). Ob das Bild über Markdown oder HTML eingebunden 
    wird ist egal. Bei einer Einbindung über HTML wäre es schon, die Größe zu begrenzen. 
+8. Wichtigster Punkt: Bitte schau, das alles funktioniert und gut aussieht. Beispielsweise, dass der Text nicht über 
+   die Karten ragt. Das Bilder möglichst einen Maximalwert in der Breite haben (z.B. 960px), usw.
 
 <v-alert color="red darken-1" border="left" elevation="2" colored-border icon="mdi-robot-angry" class="pb-4">
 Es ist wichtig bei Änderungen der Dokumentation im Repo die zentrale Dokumentationsseite nochmal zu bauen und 
