@@ -1,5 +1,5 @@
 <template>
-  <v-footer dark padless class="ma-0 pa-8">
+  <v-footer dark padless class="mx-0 mb-0 mt-3 pa-8">
     <v-container fluid class="pa-0 ma-0">
       <v-sheet height="60" color="transparent" />
       <v-row class="pb-8">

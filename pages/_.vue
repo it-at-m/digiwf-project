@@ -45,7 +45,7 @@
       </v-col>
       <!-- If the user uses a mobile device, don't display this column. -->
       <v-col cols="2" v-if="!mobile">
-        <div class="subtitle-1 grey--text text--darken-1 mt-6 mb-4">
+        <div class="subtitle-1 grey--text text--darken-1 mt-6 mb-4 ml-3">
           {{ $t('documentation.toc') }}
         </div>
         <v-list dense>
