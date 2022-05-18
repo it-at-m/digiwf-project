@@ -59,7 +59,7 @@ lazy-src="images/ecosystem/contribution/preview_github_file_link.png" ></v-img>
 
 #### DwfMarkdownLoader
 
-Über die Komponente `DwfMarkdownLoader` können Markdown Dateien geladen werden, die auf anderen Server liegen.
+Über die Komponente `DwfMarkdownLoader` können Markdown Dateien geladen werden, die auf anderen Servern liegen.
 
 ``` html
 <dwf-markdown-loader source="https://raw.githubusercontent.com/it-at-m/digiwf-s3-integration/dev/README.
