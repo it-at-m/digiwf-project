@@ -25,7 +25,7 @@ The documentation of (official) integration artifacts should be done in the resp
 It is important to rebuild and deploy the central documentation page when making changes to the documentation in the repo. Since it is a static page, it does not get any changes from another repo / on another server.
 </v-alert>
 <v-alert color="yellow darken-1" border="left" elevation="2" colored-border icon="mdi-robot-confused">
-If you omit headers in the files in the folder 'docs' and place them instead on the description page, a table of contents is automatically generated on the right side. Headings within the referenced documents cannot be shown here.
+If you omit headers in the files in the folder 'docs' and place them on the description page instead, a table of contents is automatically generated on the right side. Headers within the referenced documents cannot be shown here.
 </v-alert>
 
 <figure>
