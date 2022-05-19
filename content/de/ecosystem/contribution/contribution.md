@@ -17,14 +17,14 @@ Regeln:
 1. Die Dokumentation erfolgt ausschließlich in englischer Sprache. Auch in andere Übersetzungen (wie beispielsweise 
    Deutsch) wird die englische Dokumentation eingebunden. 
 2. Die Dokumentation liegt im jeweiligen Repo im Ordner `docs`.
-3. Die Abschnitte der Dokumentation wird in einzelne Abschnitte aufgeteilt. Diese werden dann in das `readme.md` im 
+3. Die Abschnitte der Dokumentation wird in einzelne Dokumente aufgeteilt. Diese werden dann in das `readme.md` im 
    Repo, als auch in die zentrale Dokumentation eingebunden.
 4. Für jede Sprache muss im Ordner `[Sprache]/resources/modules` eine Seite erstellt werden. Die Markdown Dateien aus 
    den Repos werden über die Komponente `DwfMarkdownLoader` eingebunden. Element Templates können über 
    `DwfElementTemplateDocs` dargestellt werden.
-5. Für den integrationsartefakt wird ein Eintrag auf der Seite `[Sprache]/resources/modules/modules.md` erstellt 
-   (auch hier bitte für alle Übersetzungen). Hierzu muss einer der vorhandenen `DIV` Elemente kopiert und entsprechend 
-   angepasst werden.
+5. Für den Integrationsartefakt wird ein Eintrag auf der Seite `[Sprache]/resources/modules/modules.md` erstellt 
+   (auch hier bitte für alle Übersetzungen). Um eine Karte auf der Übersichtsseite darzustellen muss die Komponente 
+   `DwfIntegrationArtifact` in das bereits vorhandene `<v-row>` Element eingefügt werden.
 6. Im Ordner `docs` sollten (mindestens) folgende Inhalte liegen: Quickstart, Architekturüberblick (möglichst mit 
    Bild), alle 
    Operationen (Element Templates) in eigenen Dateien. Bitte vor allem die Input und Output Parameter der Element 
@@ -56,6 +56,42 @@ lazy-src="images/ecosystem/contribution/preview_github_file_link.png" ></v-img>
 </figure>
 
 ### Spezielle Komponenten
+
+#### DwfIntegrationArtifact
+
+Über die Komponente `DwfIntegrationArtifact` können auf der Übersichts Seite für die Integrationsartefakte "Kacheln" 
+erstellt werden. 
+
+``` html
+<dwf-integration-artifact 
+   icon="mdi-email-fast"
+   name="mail-Integration" 
+   description="Artifact to integrate an e-mail server, so you can send mails from processes."
+   github="https://github.com/it-at-m/digiwf-email-integration"
+   docs="/resources/modules/emailintegration">
+</dwf-integration-artifact>
+```
+
+Attribute:
+- `icon` = Der [Material Design Icons](https://materialdesignicons.com/) Code für das Icon, das oben links in der Ecke dargestellt werden soll.
+- `name` = Der Name des Integrationsartefakts.
+- `description` = Die Beschreibung des Integrationsartefakts. Bitte darauf achten, dass die Beschreibung möglichst 
+  kurz die Leistung darstellt, aber nicht so lang ist, dass andere Inhalte aus der Karte "gepresst" werden.
+- `github` = Die URL zum github Repository.
+- `docs` = Der relative Pfad auf die Beschreibung, die in dieser Dokumentation abgelegt ist. Er wird in der Regel 
+  mit `/resources/modules/` beginnen, gefolgt vom Namen der Markdowndatei (ohne Dateiendung). Wenn die Datei an 
+  anderer Stelle abgelegt wurde, dann muss natürlich auch der Pfad entsprechend angepasst werden. Der Pfad für die 
+  Übersetzungen wird automatisch angepasst. Es muss also beispielsweise für die Deutsche Übersetzung kein `de` 
+  vorangestellt werden.
+
+<figure>
+<v-img alt="Es wird gezeigt, wie die Darstellung einer Karte für einen Integrationsartefakt in der Doku aussieht. 
+(Screenshot)" contain 
+max-width="960" 
+src="images/ecosystem/contribution/integration_artifact_card.png" 
+lazy-src="images/ecosystem/contribution/preview_integration_artifact_card.png" ></v-img>
+<figcaption>Integration Artifact Card (Beispiel)</figcaption>
+</figure>
 
 #### DwfMarkdownLoader
 
