@@ -17,7 +17,9 @@
         :to="switchLocalePath(locale.code)"
         nuxt
       >
-        <v-list-item-title v-text="locale.name" />
+        <v-list-item-title>
+          {{ locale.name }}
+        </v-list-item-title>
       </v-list-item>
     </v-list>
   </v-menu>
