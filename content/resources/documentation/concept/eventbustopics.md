@@ -35,10 +35,23 @@ Currently, the environments `dev`, `test`, `demo` and `local-01` exist. `dev`, `
 
 ### Domain digiwf-engine
 
+The digiwf-engine uses the spring cloud stream function router to route events based on the `type` header to the according spring cloud functions.
+Therefore, every message that is sent to `dwf-digiwf-engine-<ENV>` requires the header `type`.
+
 ```
 dwf-digiwf-engine-<ENV>
 ```
 
+The following values for the header `type` are currently supported:
+
+| Header Type         | Payload Type            | Description                                                                                      |
+|---------------------|-------------------------|--------------------------------------------------------------------------------------------------|
+| correlateMessageV01 | `CorrelateMessageTOV01` | Use `CorrelateMessageTOV01`  to correlate a message to a process instance.                       |
+| startProcessV01     | `StartInstanceTOV01`    | Use `startProcessV01` header type to start a new process instance with the process key and data. |
+
+
+> **Note:**
+> We use springwolf to generate asyncapi documentations. Checkout the services asyncapi docs under */springwolf/asyncapi-ui.html*.
 
 ### Domain cocreation
 
@@ -54,7 +67,13 @@ This happens in the bpm-server application.
 
 The digiwf-engine application is a consumer of the `dwf-cocreation-<ENV>` topic and deploys the artifacts (bpmn, dmn or json form) from incoming deployment events to the camunda engine.
 The digiwf-engine uses the spring cloud stream function router to route events based on the `type` header to the according spring cloud functions.
-In this use case the header `type` with the value `deploy` is used in the deployment event. 
+
+The following values for the header `type` are currently supported:
+
+| Header Type    | Payload Type            | Description                                                                                |
+|----------------|-------------------------|--------------------------------------------------------------------------------------------|
+| deploy         | `DeploymentEvent`       | Use the `deploy` header type to deploy processes and decision tables to the digiwf-engine. |
+| deploySchema   | `SchemaDeploymentEvent` | Use the `deploySchema` header type to deploy JSON schema forms to the digiwf-engine.       |
 
 ```
 dwf-cocreation-deploy-<ENV>
@@ -62,4 +81,5 @@ dwf-cocreation-deploy-<ENV>
 
 After every deployment the digiwf-engine sends a deployment status event to the `dwf-cocreation-deploy-<ENV>` topic that informs subscribes of the topic about the success or failure of the deployment.
 
-
+> **Note:**
+> We use springwolf to generate asyncapi documentations. Checkout the services asyncapi docs under */springwolf/asyncapi-ui.html*.
