@@ -1,5 +1,5 @@
 <template>
-  <v-footer dark padless class="ma-0 pa-8">
+  <v-footer dark padless class="mx-0 mb-0 mt-3 pa-8">
     <v-container fluid class="pa-0 ma-0">
       <v-sheet height="60" color="transparent" />
       <v-row class="pb-8">
@@ -44,9 +44,11 @@
 <!--          <v-row class="text-body-2 mt-6">-->
 <!--            Announcements-->
 <!--          </v-row>-->
-<!--          <v-row class="text-body-2 mt-6">-->
-<!--            Contribute-->
-<!--          </v-row>-->
+          <v-row class="text-body-2 mt-6">
+            <NuxtLink class="text-decoration-none white--text" :to="localePath('/ecosystem/contribution/contribution')">
+              {{ $t('footer.ecosystem.contribution') }}
+            </NuxtLink>
+          </v-row>
 <!--          <v-row class="text-body-2 mt-6">-->
 <!--            Team-->
 <!--          </v-row>-->
@@ -72,9 +74,11 @@
 <!--          <v-row class="text-body-2 mt-6">-->
 <!--            Examples-->
 <!--          </v-row>-->
-<!--          <v-row class="text-body-2 mt-6">-->
-<!--            Modules-->
-<!--          </v-row>-->
+          <v-row class="text-body-2 mt-6">
+            <NuxtLink class="text-decoration-none white--text" :to="localePath('/resources/modules/modules')">
+              {{ $t('footer.resources.modules') }}
+            </NuxtLink>
+          </v-row>
 <!--          <v-row class="text-body-2 mt-6">-->
 <!--            Releases-->
 <!--          </v-row>-->

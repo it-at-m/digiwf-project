@@ -8,6 +8,12 @@
     "prev": "previous page",
     "next": "next page"
   },
+  "integrationartifact": {
+    "name": "Integration Artifact",
+    "description": "Description",
+    "github": "Github",
+    "documentation": "Docs"
+  },
   "footer": {
     "about": {
       "vision": "Vision Statement",
@@ -18,11 +24,13 @@
       "impress": "Impress"
     },
     "ecosystem": {
-      "title": "Ecosystem"
+      "title": "Ecosystem",
+      "contribution": "Contributions"
     },
     "resources": {
       "title": "Resources",
-      "architecture": "Concept"
+      "architecture": "Concept",
+      "modules": "Integration Artifacts"
     },
     "social": {
       "title": "Stay tuned!",

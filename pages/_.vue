@@ -7,7 +7,7 @@
       <v-col cols="2" v-if="!mobile">
         <dwf-navigation-drawer :navigation="navigation" />
       </v-col>
-      <v-col cols="12" sm="12" md="12" lg="8" xl="8">
+      <v-col cols="12" sm="12" md="12" lg="7" xl="5">
         <h1 class="mb-6 mt-6 text-h5 text-xl-h1 text-lg-h2 text-md-h3 text-sm-h4">
           {{ article.title }}
         </h1>
@@ -45,7 +45,7 @@
       </v-col>
       <!-- If the user uses a mobile device, don't display this column. -->
       <v-col cols="2" v-if="!mobile">
-        <div class="subtitle-1 grey--text text--darken-1 mt-6 mb-4">
+        <div class="subtitle-1 grey--text text--darken-1 mt-6 mb-4 ml-3">
           {{ $t('documentation.toc') }}
         </div>
         <v-list dense>
@@ -62,14 +62,25 @@
   </v-container>
 </template>
 <script>
-import { VAlert, VImg } from 'vuetify/lib'
+import { VAlert, VImg, VSpacer } from 'vuetify/lib'
+import DwfIntegrationArtifact from '../components/DwfIntegrationArtifact'
+import DwfMarkdownLoader from '../components/DwfMarkdownLoader'
+import DwfElementTemplateDocs from '../components/DwfElementTemplateDocs'
 
 export default {
   components: {
     // eslint-disable-next-line vue/no-unused-components
     VAlert,
     // eslint-disable-next-line vue/no-unused-components
-    VImg
+    VImg,
+    // eslint-disable-next-line vue/no-unused-components
+    VSpacer,
+    // eslint-disable-next-line vue/no-unused-components
+    DwfIntegrationArtifact,
+    // eslint-disable-next-line vue/no-unused-components
+    DwfMarkdownLoader,
+    // eslint-disable-next-line vue/no-unused-components
+    DwfElementTemplateDocs
   },
   async asyncData ({ $content, params, error, app }) {
     // Get correct locale, delete first '/' and add a '/' to the end.
