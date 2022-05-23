@@ -7,7 +7,7 @@ position: 5
 ---
 
 The DigiWF applications communicate with an `Event Bus` to exchange events that occur within the DigiWF plattform.
-Internally the DigiWF application use spring cloud stream as an abstraction layer to interact with the `Event Bus`. Therefore, the `Event Bus` is interchangeable as long as a spring cloud stream exists.
+Internally the DigiWF application use spring cloud stream as an abstraction layer to interact with the `Event Bus`. Therefore, the `Event Bus` is interchangeable as long as a spring cloud stream binder exists.
 
 In this article we explain our topic naming conventions and list the currently existing topics. 
 
@@ -46,7 +46,7 @@ The following values for the header `type` are currently supported:
 
 | Header Type         | Payload Type            | Description                                                                                      |
 |---------------------|-------------------------|--------------------------------------------------------------------------------------------------|
-| correlateMessageV01 | `CorrelateMessageTOV01` | Use `CorrelateMessageTOV01`  to correlate a message to a process instance.                       |
+| correlateMessageV01 | `CorrelateMessageTOV01` | Use `CorrelateMessageTOV01` header type to correlate a message to a process instance.            |
 | startProcessV01     | `StartInstanceTOV01`    | Use `startProcessV01` header type to start a new process instance with the process key and data. |
 
 
