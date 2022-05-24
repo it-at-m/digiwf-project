@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="d-flex flex-wrap float-left" v-for="tutorial in $data.tutorials">
+    <div class="d-flex flex-wrap float-left" v-for="tutorial in $data.tutorials" :key="tutorial.title">
       <v-card
         class="ma-3 align-start"
         width="290"
@@ -38,19 +38,19 @@
 <script>
 export default {
   name: 'DwfTutorials.vue',
-  data() {
+  data () {
     return {
       tutorials: []
     }
   },
-  mounted() {
+  mounted () {
     this.$content('/resources/tutorials', { deep: true })
       .fetch()
-      .then(pages => {
+      .then((pages) => {
         const filteredPages = pages
-          .filter(p => p.category === 'Tutorials' && p.position > 1);
-        this.tutorials.push(...filteredPages);
-      });
+          .filter(p => p.category === 'Tutorials' && p.position > 1)
+        this.tutorials.push(...filteredPages)
+      })
   }
 }
 </script>
