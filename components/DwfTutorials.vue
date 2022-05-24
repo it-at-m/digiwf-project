@@ -48,7 +48,7 @@ export default {
       .fetch()
       .then((pages) => {
         const filteredPages = pages
-          .filter(p => p.category === 'Tutorials' && p.position > 1)
+          .filter(p => p.position > 1)
         this.tutorials.push(...filteredPages)
       })
   }
