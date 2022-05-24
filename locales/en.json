@@ -30,7 +30,8 @@
     "resources": {
       "title": "Resources",
       "architecture": "Concept",
-      "modules": "Integration Artifacts"
+      "modules": "Integration Artifacts",
+      "tutorials": "Tutorials"
     },
     "social": {
       "title": "Stay tuned!",
@@ -52,5 +53,8 @@
     "slack": {
       "aria": "opens our slack channel in a new tab"
     }
+  },
+  "tutorials": {
+      "view": "View tutorial"
   }
 }
