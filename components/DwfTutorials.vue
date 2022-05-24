@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-row>
     <div class="d-flex flex-wrap float-left" v-for="tutorial in $data.tutorials" :key="tutorial.title">
       <v-card
         class="ma-3 align-start"
@@ -32,7 +32,7 @@
         </v-card-actions>
       </v-card>
     </div>
-  </div>
+  </v-row>
 </template>
 
 <script>

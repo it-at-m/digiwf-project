@@ -6,6 +6,4 @@ categoryIcon: 'mdi-school'
 position: 1
 ---
 
-<v-row>
-  <dwf-tutorials></dwf-tutorials>
-</v-row>
+<dwf-tutorials></dwf-tutorials>
