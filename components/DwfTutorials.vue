@@ -13,9 +13,6 @@
           <div class="text-h6 text--primary">
             {{ tutorial.title }}
           </div>
-          <div class="text--primary">
-            {{ tutorial.description }}
-          </div>
         </v-card-text>
         <v-card-actions>
           <v-btn
@@ -44,7 +41,7 @@ export default {
     }
   },
   mounted () {
-    this.$content('/resources/tutorials', { deep: true })
+    this.$content('resources/tutorials', { deep: true })
       .fetch()
       .then((pages) => {
         const filteredPages = pages
