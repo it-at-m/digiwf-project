@@ -22,7 +22,9 @@ The digiwf-engine uses internally a custom spring cloud stream function router t
 Therefore, you have to send a start process event to the `dwf-digiwf-engine-ENV` topic (replace the *ENV* with a valid environment) with the header `type` and the value `startProcessV01` to start a new process.
 The `type` headers value is used in the digiwf-engine to route the start process event to the suitable consumer function.
 
-The start process event must contain the process key in `key` variable. Additionally, you can add additional data in the `data` variable. The `data` variable is represented in the digiwf-engine with a map. Therefore, you can add information dynamically following a key (String) value (any object) schema.
+The start process event may contain a business key in `key` variable and additional data in the `data` variable. The `data` variable is represented in the digiwf-engine with a map. Therefore, you can add information dynamically following a key (String) value (any object) schema.
+
+> The business key is special process variable that is fully indexed and usually contains domain specific information. For more details checkout [this blog post](https://camunda.com/blog/2018/10/business-key/).
 
 ```json
 {
@@ -35,7 +37,7 @@ The start process event must contain the process key in `key` variable. Addition
 
 | Field | Datatype            | Required |
 |-------|---------------------|----------|
-| key   | String              | Required |
+| key   | String              | Optional |
 | data  | Map<String, Object> | Optional |
 
 
@@ -45,7 +47,7 @@ The digiwf-engine uses internally a custom spring cloud stream function router t
 Therefore, you have to send a correlate message event to the `dwf-digiwf-engine-ENV` topic (replace the *ENV* with a valid environment) with the header `type` and the value `CorrelateMessageTOV01` to correlate a message to a process instance.
 The `type` headers value is used in the digiwf-engine to route the correlate message event to the suitable consumer function.
 
-The correlate message event should contain as `processInstanceId` the instance id of your process, an optional message name and the business key. Additionally, you can provide correlation. The correlation and payload variables are represented as a key (string) value (any object) map.
+The correlate message event should contain as `processInstanceId` the instance id of your process, an optional message name and an optional business key. Additionally, you can provide correlation. The correlation and payload variables are represented as a key (string) value (any object) map.
 
 ```json
 {
@@ -71,7 +73,7 @@ The correlate message event should contain as `processInstanceId` the instance i
 |---------------------------|---------------------------|----------|
 | processInstanceId         | String                    | Required |
 | messageName               | String                    | Optional |
-| businessKey               | String                    | Required |
+| businessKey               | String                    | Optional |
 | correlationVariables      | Map<String, Object>       | Optional |
 | correlationVariablesLocal | Map<String, Object>       | Optional |
 | payloadVariables          | Map<String, Object>       | Optional |

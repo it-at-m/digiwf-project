@@ -21,7 +21,9 @@ Die unterstützten Eventtypen sind in der [Dokumentation](/de/resources/document
 
 Um Prozesse mit der digiwf-engine zu starten, müssen Sie ein Startprozess-Event an das Topic `dwf-digiwf-engine-ENV` (ersetzen Sie *ENV* durch eine gültige Umgebung) mit dem Header `type` und dem Wert `startProcessV01` senden.
 
-Das Prozessstart-Event muss den process key in der Variablen "key" enthalten. Zusätzlich können Sie weitere Daten in der Variable `data` hinzufügen. Die Variable `data` wird in der digiwf-engine mit einer Map dargestellt. Daher können Sie Informationen dynamisch nach einem Schlüssel (String) Wert (beliebiges Objekt) Schema hinzufügen.
+Das Prozessstart-Event kann einen Business Key in der Variablen `key` und zusätzliche Daten in der Variable `data` enthalten. Die Variable `data` wird in der digiwf-engine mit einer Map dargestellt. Daher können Sie Informationen dynamisch nach einem Schlüssel (String) Wert (beliebiges Objekt) Schema hinzufügen.
+
+> Der Business Key ist eine spezielle Prozessvariable, die vollständig indiziert ist und normalerweise domänenspezifische Informationen enthält. Weitere Einzelheiten finden Sie in [diesem Blogbeitrag] (https://camunda.com/blog/2018/10/business-key/). 
 
 ```json
 {
@@ -32,17 +34,17 @@ Das Prozessstart-Event muss den process key in der Variablen "key" enthalten. Zu
 }
 ```
 
-| Feld | Datentype           | Erforderlich  |
-|------|---------------------|---------------|
-| key  | String              | Erforderlich  |
-| data | Map<String, Object> | Optional      |
+| Feld | Datentype           | Erforderlich |
+|------|---------------------|--------------|
+| key  | String              | Optional     |
+| data | Map<String, Object> | Optional     |
 
 
 ## Nachrichten korrelieren
 
 Um eine Nachricht mit einer Prozessinstanz zu korrelieren, müssen Sie ein Korrelationsnachrichtenereignis an das Topic `dwf-digiwf-engine-ENV` (ersetzen Sie *ENV* durch eine gültige Umgebung) mit dem Header `type` und dem Wert `CorrelateMessageTOV01` senden.
 
-Das Korrelationsnachrichtenereignis sollte als `processInstanceId` die Instanz-ID Ihres Prozesses, einen optionalen Nachrichtennamen und den Businesskey enthalten. Zusätzlich können Sie eine Korrelation angeben. Die Correlation- und Payloadvariablen werden als Schlüssel (String) Wert (beliebiges Objekt) Map dargestellt.
+Das Korrelationsnachrichtenereignis sollte als `processInstanceId` die Instanz-ID Ihres Prozesses, einen optionalen Nachrichtennamen und einen optionalen Business Key enthalten. Zusätzlich können Sie eine Korrelation angeben. Die Correlation- und Payloadvariablen werden als Schlüssel (String) Wert (beliebiges Objekt) Map dargestellt.
 
 ```json
 {
@@ -64,12 +66,12 @@ Das Korrelationsnachrichtenereignis sollte als `processInstanceId` die Instanz-I
 }
 ```
 
-| Feld                      | Datentype           | Erforderlich   |
-|---------------------------|---------------------|----------------|
-| processInstanceId         | String              | Erforderlich   |
-| messageName               | String              | Optional       |
-| businessKey               | String              | Erforderlich   |
-| correlationVariables      | Map<String, Object> | Optional       |
-| correlationVariablesLocal | Map<String, Object> | Optional       |
-| payloadVariables          | Map<String, Object> | Optional       |
-| payloadVariablesLocal     | Map<String, Object> | Optional       |
+| Feld                      | Datentype           | Erforderlich |
+|---------------------------|---------------------|--------------|
+| processInstanceId         | String              | Erforderlich |
+| messageName               | String              | Optional     |
+| businessKey               | String              | Optional     |
+| correlationVariables      | Map<String, Object> | Optional     |
+| correlationVariablesLocal | Map<String, Object> | Optional     |
+| payloadVariables          | Map<String, Object> | Optional     |
+| payloadVariablesLocal     | Map<String, Object> | Optional     |
