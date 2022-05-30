@@ -24,7 +24,8 @@
     "resources": {
       "title": "Quellen",
       "architecture": "Konzeption",
-      "modules": "Integrations Artefakte"
+      "modules": "Integrations Artefakte",
+      "tutorials": "Tutorials"
     },
     "social": {
       "title": "Stay tuned!",
@@ -46,5 +47,8 @@
     "slack": {
       "aria": "Öffnet Slack, oder die Registrierungsseite von Slack in einem eigenen Browser Tab."
     }
+  },
+  "tutorials": {
+    "view": "Tutorial ansehen"
   }
 }
