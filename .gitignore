@@ -89,3 +89,7 @@ sw.*
 # Vim swap files
 *.swp
 /yarn.lock
+
+# Idea specific
+.idea
+*.iml
