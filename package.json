@@ -14,7 +14,7 @@
     "@nuxt/content": "^1.15.1",
     "@nuxt/http": "^0.6.4",
     "@nuxtjs/i18n": "^7.2.2",
-    "core-js": "^3.22.8",
+    "core-js": "^3.23.0",
     "marked": "^4.0.16",
     "nuxt": "^2.15.8",
     "vuetify": "^2.6.6"
