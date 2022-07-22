@@ -17,11 +17,11 @@ The supported event types are listed in the [documentation](/resources/documenta
 > Note: If you do not set the Header `type` in your kafka messages the digiwf-engine cannot route the message to the suitable consumer function. This also applies if you set an unknown value for the `type` header.
 
 
-## Artifact deployment (bpmn, dmn and json schema)
+## Artifact deployment (bpmn, dmn, json schema and process configurations)
 
-To deploy artifacts to the digiwf-engine send a deployment event to the `dwf-cocreation-<ENV>` topic topic (replace the *ENV* with a valid environment) with the header `type` and the value `deploy` for *.bpmn* and *.dmn* files. For json schema forms use the header `type` with the value `deploySchema`.
+To deploy artifacts to the digiwf-engine send a deployment event to the `dwf-cocreation-<ENV>` topic topic (replace the *ENV* with a valid environment) with the header `type` and the value `deploy` for *.bpmn* and *.dmn* files. For json schema forms use the header `type` with the value `deploySchema`. For process configurations use the header `type` with the value `deployConfiguration`.
 
-The deployment event consists of a unique `deploymentId` and `versionId`. The `target` represent the environment you deployed the event to. The `artifactType` is either `BPMN`, `DMN` or `FORM` and the `file` is the file converted to string.
+The deployment event consists of a unique `deploymentId` and `versionId`. The `target` represent the environment you deployed the event to. The `artifactType` is either `BPMN`, `DMN`, `FORM` or `CONFIGURATION` and the `file` is the file converted to string.
 
 ```json
 {
