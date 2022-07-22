@@ -19,9 +19,9 @@ Die unterstützten Eventtypen sind in der [Dokumentation](/de/resources/document
 
 ## Artefakt deployment
 
-Um Artefakte für die digiwf-Engine bereitzustellen, senden Sie ein Bereitstellungsereignis an das Topic `dwf-cocreation-<ENV>` (ersetzen Sie *ENV* durch eine gültige Umgebung) mit dem Header `type` und dem Wert `deploy` für *.bpmn* und *.dmn* Dateien. Verwenden Sie für JSON-Schemaformulare den Header `type` mit dem Wert `deploySchema`.
+Um Artefakte für die digiwf-Engine bereitzustellen, senden Sie ein Bereitstellungsereignis an das Topic `dwf-cocreation-<ENV>` (ersetzen Sie *ENV* durch eine gültige Umgebung) mit dem Header `type` und dem Wert `deploy` für *.bpmn* und *.dmn* Dateien. Verwenden Sie für JSON-Schemaformulare den Header `type` mit dem Wert `deploySchema`. Verwenden Sie für Prozess-Konfigurationen den Header `type` mit dem Wert `deployConfiguration`.
 
-Das Deployment-Ereignis besteht aus einer eindeutigen `deploymentId` und `versionId`. Das `Ziel` stellt die Umgebung dar, in der Sie das Ereignis bereitgestellt haben. Der `artifactType` ist entweder `BPMN`, `DMN` oder `FORM` und die `file` ist die in einen String konvertierte Datei.
+Das Deployment-Ereignis besteht aus einer eindeutigen `deploymentId` und `versionId`. Das `Ziel` stellt die Umgebung dar, in der Sie das Ereignis bereitgestellt haben. Der `artifactType` ist entweder `BPMN`, `DMN`, `FORM` oder `CONFIGURATION` und die `file` ist die in einen String konvertierte Datei.
 
 ```json
 {
