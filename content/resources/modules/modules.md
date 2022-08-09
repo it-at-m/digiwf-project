@@ -16,5 +16,9 @@ docs="/resources/modules/okewointegration"></dwf-integration-artifact>
 github="https://github.com/it-at-m/digiwf-email-integration" icon="mdi-email-fast"
 docs="/resources/modules/emailintegration"></dwf-integration-artifact>
 
+<dwf-integration-artifact name="s3-Integration" description="Artifact to integrate a server to s3 storage." 
+github="https://github.com/it-at-m/digiwf-s3-integration" icon="mdi-file-sync"
+docs="/resources/modules/s3integration"></dwf-integration-artifact>
+
 </div>
 </v-row>
