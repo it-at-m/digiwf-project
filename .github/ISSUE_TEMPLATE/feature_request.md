@@ -22,6 +22,9 @@ Add any other context or screenshots about the feature request here.
 **Acceptance criteria**
 What conditions must be satisfied to be accepted
 
+- [ ] ..
+- [ ] feature process is created / updated
+
 **Priority**
 When is the feature needed
 
