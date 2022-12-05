@@ -18,7 +18,7 @@
 <h3 align="center">DigiWF Project Page</h3>
 
   <p align="center">
-    This is the project landing page and documentation for the DigiWF process infrastructure. For more information visit https://digiwf.muenchendigital.io
+    This is the project landing page and documentation for the DigiWF process infrastructure. For more information visit https://digiwf.oss.muenchen.de
     <br /><a href="https://github.com/it-at-m/digiwf-project/issues">Report Bug</a>
     ·
     <a href="https://github.com/it-at-m/digiwf-project/issues">Request Feature</a>
@@ -28,7 +28,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This Project is the landing page of DigiWF. For more information and facts about the development of our project - the DigiWF workflow automation and integration platform - please visit https://digiwf.muenchendigital.io.
+This Project is the landing page of DigiWF. For more information and facts about the development of our project - the DigiWF workflow automation and integration platform - please visit https://digiwf.oss.muenchen.de.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -86,7 +86,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 <!-- CONTACT -->
 ## Contact
 
-it@m - opensource@muenchendigital.io
+it@m - opensource@muenchen.de
 
 [join our slack channel](https://join.slack.com/t/digiwf/shared_invite/zt-14jxazj1j-jq0WNtXp7S7HAwJA7tKgpw)
 
