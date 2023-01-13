@@ -15,7 +15,7 @@ lazy-src="images/preview_digiwf_concept_process_and_integrationplatform.png" ></
 <figcaption>The Core Components</figcaption>
 </figure>
 
-Today - more than 1.5 years later - DigiWF has become a frequently used platform. Above all, the integration concept is now mature and any system that has an interface (and if it doesn't have an interface, then you just connect an RPA client) can be connected without much effort. This is made possible by a modular building block concept via a collection of Spring Boot starters. Problems such as file handling become a standard problem that can be solved equally (equally easily) on all input channels.
+Today DigiWF has become a frequently used platform. Above all, the integration concept is now mature and any system that has an interface (and if it doesn't have an interface, then you just connect an RPA client) can be connected without much effort. This is made possible by a modular building block concept via a collection of Spring Boot starters. Problems such as file handling become a standard problem that can be solved equally (equally easily) on all input channels.
 
 When such a platform grows, sooner or later the question arises as to who should do the work. DigiWF has been consistently built so that people who are able to create automated workflows (but can't program) can do so on their own. This is made possible by a separate "low code" component - the co-creation. There, processes and decision tables can be created on the basis of BPMN and DMN. Backend systems (if an integration artefact is available for them) are declaratively connected via input and output templates. In addition to the processes, forms for user tasks can also be created using drag & drop.
 
