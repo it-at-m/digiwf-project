@@ -21,4 +21,4 @@ When such a platform grows, sooner or later the question arises as to who should
 
 If you - similar to the state capital Munich - have many processes with a lot of user tasks. And then a 
 heterogeneous backend landscape that you have to integrate into your processes, then you should definitely take a 
-look at DigiWF. Simply contact us by [email](mailto:opensource@muenchendigital.io) or one of the social media channels.
+look at DigiWF. Simply contact us by [email](mailto:opensource@muenchen.de) or one of the social media channels.

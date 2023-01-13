@@ -22,4 +22,4 @@ Wenn eine solche Plattform wächst, stellt sich früher oder später die Frage, 
 
 Wenn Sie – ähnlich wie in der Landeshauptstadt München – viele Prozesse mit vielen Benutzeraufgaben haben. Und dann ein
 heterogene Backend-Landschaft, die Sie in Ihre Prozesse integrieren müssen, dann sollten Sie unbedingt eine nehmen
-schau mal bei DigiWF. Kontaktieren Sie uns einfach per [E-Mail](mailto:opensource@muenchendigital.io) oder über einen der Social-Media-Kanäle.
+schau mal bei DigiWF. Kontaktieren Sie uns einfach per [E-Mail](mailto:opensource@muenchen.de) oder über einen der Social-Media-Kanäle.
