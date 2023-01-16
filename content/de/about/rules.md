@@ -72,7 +72,7 @@ Offline-Veranstaltung.
 ## Durchsetzung
 
 Fälle von missbräuchlichem, belästigendem oder anderweitig inakzeptablem
-Verhalten können unter <opensource@muenchendigital.io> der für die Durchsetzung
+Verhalten können unter <opensource@muenchen.de> der für die Durchsetzung
 zuständigen Gemeinschaftsleitung gemeldet werden. Alle Beschwerden werden
 zeitnah und fair geprüft und ermittelt.
 
